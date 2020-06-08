@@ -238,8 +238,10 @@ if __name__ == "__main__":
     mean_ratio_theta = []
     if len(sys.argv) > 2:
         reg, lr, num_steps = float(sys.argv[2]), float(sys.argv[3]), int(float(sys.argv[4]))
+        filename = f'data/test_stat_ang_{ang}_reg_{reg}_lr_{lr}_step_{num_steps}.npy'
     else: 
         reg, lr, num_steps = 100, 2e-2, 400
+        filename = f'data/test_stat_{ang}.npy'
 
     for t1 in theta1:
         mean_ratio_theta_row = []
@@ -254,5 +256,5 @@ if __name__ == "__main__":
 
 
 
-    np.save(f'data/test_stat_{ang}.npy', np.array(mean_ratio_theta))
+    np.save(filename, np.array(mean_ratio_theta))
 
