@@ -216,6 +216,7 @@ def lower_bound(theta, fair_direction, regularizer = 1, learning_rate = 5e-2, nu
 
 
 if __name__ == "__main__":
+    
 
     theta1 = np.arange(-4, 4.1, step = 0.4)
     theta2 = np.arange(-4, 4.1, step = 0.4)
@@ -235,12 +236,16 @@ if __name__ == "__main__":
     orth_fair = np.array([fair_direction[1], -fair_direction[0]])
 
     mean_ratio_theta = []
+    if len(sys.argv) > 2:
+        reg, lr, num_steps = float(sys.argv[2]), float(sys.argv[3]), int(float(sys.argv[4]))
+    else: 
+        reg, lr, num_steps = 100, 2e-2, 400
 
     for t1 in theta1:
         mean_ratio_theta_row = []
     
         for t2 in theta2:
-            r = lower_bound([t1, t2], fair_direction, regularizer= 100, learning_rate=2e-2, num_steps=400)
+            r = lower_bound([t1, t2], fair_direction, regularizer= reg, learning_rate=lr, num_steps=num_steps)
             mean_ratio_theta_row.append(r)
         
         mean_ratio_theta.append(mean_ratio_theta_row)
