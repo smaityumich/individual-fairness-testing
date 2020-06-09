@@ -18,4 +18,4 @@ We summarize functionality of some important scripts below.
 | `summary.py` | Calculates fairness metrics and lower bound, and store them in `../all_summary.out` file |
 | `utils.py` | Contains utility functions such as entropy and accuracy | 
 
-A demo for single run for SenSR is presented in `demo.ipynb`.
+A demo for single run for SenSR and reduction is presented in `demo.ipynb`.
