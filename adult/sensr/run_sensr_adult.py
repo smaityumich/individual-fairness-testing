@@ -1,16 +1,16 @@
 import numpy as np
-from adult_data import preprocess_adult_data
+from .adult_data import preprocess_adult_data
 from sklearn.linear_model import LogisticRegression
-from metrics import group_metrics
+from .metrics import group_metrics
 from sklearn.preprocessing import OneHotEncoder
-from train_clp_adult import train_fair_nn
+from .train_clp_adult import train_fair_nn
 import tensorflow.compat.v1 as tf
 import json
 import sys
 
 
 # np.save('seeds.npy', seeds)
-def run_sensr(seed_data, seed_model):
+def run_sensr(seed_data, seed_model, save_model = True):
     
 
     #seed_data = int(float(sys.argv[1]))
@@ -46,9 +46,9 @@ def run_sensr(seed_data, seed_model):
     tf.reset_default_graph()
     fair_info = [group_train, group_test, group_names, sensitive_directions]
     weights, train_logits, test_logits, _, variables = train_fair_nn(x_train, y_train, tf_prefix='sensr', adv_epoch_full=50, l2_attack=0.0001,
-                                          adv_epoch=10, ro=0.001, adv_step=10., plot=True, fair_info=fair_info, balance_batch=True, 
+                                          adv_epoch=10, ro=0.001, adv_step=10., plot=save_model, fair_info=fair_info, balance_batch=True, 
                                           X_test = x_test, X_test_counter=None, y_test = y_test, lamb_init=2., 
-                                          n_units=[100], l2_reg=0, epoch=20000, batch_size=1000, lr=1e-5, lambda_clp=0.,
+                                          n_units=[100], l2_reg=0, epoch=2000, batch_size=1000, lr=1e-5, lambda_clp=0.,
                                           fair_start=0., counter_init=False, seed=None)
 
     print('Gender:')
@@ -58,8 +58,12 @@ def run_sensr(seed_data, seed_model):
 
 
     weight = [w.tolist() for w in weights]
-    with open(f'models/data_{seed_data}_{seed_model}.txt', 'w') as f:
-        json.dump(weight, f)
+    if save_model:
+        with open(f'models/data_{seed_data}_{seed_model}.txt', 'w') as f:
+            json.dump(weight, f)
+        return None
+    else:
+        return weight
 
 if __name__ == "__main__":
     np.random.seed(1)
