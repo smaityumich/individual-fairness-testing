@@ -37,5 +37,5 @@ Codes for reproducing the results are given below. The plot is saves as `./plots
 python3 loss_linear.py 0
 python3 loss_linear.py 5
 python3 loss_linear.py 10
-pyython3 plot.py
+python3 plot.py
 ```
