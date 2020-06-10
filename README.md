@@ -1,6 +1,6 @@
 # Statistical Inference for Individual Fairness
 
-This is the supplimentary code acompanying NeurIPS 2020 submission "Statistical inference for individual fairness"
+This is the supplementary code accompanying NeurIPS 2020 submission "Statistical inference for individual fairness"
 
 ## Overview
 

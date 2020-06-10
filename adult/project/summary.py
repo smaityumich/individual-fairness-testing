@@ -52,24 +52,10 @@ if __name__ == '__main__':
             average_odds_difference_race, equal_opportunity_difference_race,\
                  statistical_parity_difference_race = metrics.group_metrics(y_test, y_pred, race, label_good=1)
 
-     start = np.arange(0, 9001, 200)
-     end = np.arange(200, 9201, 200)
-     end[-1] = 9045
+     
 
-
-#os.system('touch summary/adult7.out')
-
-     ratios = []
-
-     for s, e in zip(start, end):
-          filename = f'./baseline/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
-          try:
-               ratio_part = np.load(filename)
-               ratios.append(ratio_part)
-          except:
-               continue
-     a = np.concatenate(ratios)
-
+     filename = f'./baseline/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
+     a = np.load(filename)
      a = a[np.isfinite(a)]
      lb = np.mean(a) - 1.645*np.std(a)/np.sqrt(a.shape[0])
      t = (np.mean(a)-1.25)/np.std(a)

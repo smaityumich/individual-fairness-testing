@@ -1,7 +1,7 @@
 # Individual Fairness Testing for *Adult* data
 
 The proposed test is applied on four different ML models fitted on Adult data: baseline, project, reduction and SenSR. 
-Two protected arrtibutes are considered: gender and race. The baseline  is obtained by simple 2 layer neural net on adult data,
+Two protected attributes are considered: gender and race. The baseline  is obtained by simple 2 layer neural net on adult data,
 without using protected attributes. The projection is obtained by fitting neural net on the data, where the sensitive directions 
 are projected out from feature vectors. Reduction approach consider the model enforcing group fairness in classification, 
 described in [A reductions approach to fair classification](https://arxiv.org/abs/1803.02453) paper by Agarwal et al. 

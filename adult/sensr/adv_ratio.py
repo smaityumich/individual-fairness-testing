@@ -51,8 +51,7 @@ def sample_perturbation(data_point, regularizer = 100, learning_rate = 5e-2, num
             loss = utils.EntropyLoss(y, prob)  - regularizer  * tf.norm(perturb)**2
 
         gradient = g.gradient(loss, x)
-        x = x + learning_rate * gradient / ((i + 1) ** (2/3))
-
+        x = x + learning_rate * gradient
     return_loss = utils.EntropyLoss(y, graph(x)) / utils.EntropyLoss(y, graph(x_start))
     
     return return_loss.numpy()
