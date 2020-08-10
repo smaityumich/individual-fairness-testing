@@ -1,0 +1,736 @@
+SLURM_JOBID:  11509806
+SLURM_ARRAY_TASK_ID:  2
+SLURM_ARRAY_JOB_ID:  11509802
+WARNING:tensorflow:From /home/smaity/.local/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-08-10 16:41:06.202642: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arcts/centos7/python3.6-anaconda/5.2.0/lib:/opt/slurm/lib64::
+2020-08-10 16:41:06.202678: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-08-10 16:41:06.202702: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gl3231.arc-ts.umich.edu): /proc/driver/nvidia/version does not exist
+2020-08-10 16:41:06.202963: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-10 16:41:06.208838: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-10 16:41:06.208947: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x557b3a10dfd0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-10 16:41:06.208958: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+(5278, 8)
+['sex', 'race', 'priors_count', 'age_cat=25 to 45', 'age_cat=Greater than 45', 'age_cat=Less than 25', 'c_charge_degree=F', 'c_charge_degree=M']
+sex
+race
+Real and fair distances (max/min/mean):
+0.0 0.0 0.0
+0.0 0.0 0.0
+Counter success count is -1
+Epoch 0 train accuracy 0.548318; loss 0.692942; lambda is 2.000000
+Epoch 0 test accuracy 0.55303
+Train AUC is 0.566443; balanced AUC is 0.566443
+Train accuracy 0.548; balanced accuracy 0.525; FDR 0.414; TPR 0.135
+
+Train sex accuracy 0.630; balanced accuracy 0.513; FDR 0.579; TPR 0.110
+
+Train sex gap RMS 0.0207329279319879
+Train race accuracy 0.612; balanced accuracy 0.520; FDR 0.500; TPR 0.110
+
+Train race gap RMS 0.03265339735652282
+Train STD accuracy 0.009; balanced accuracy 0.003; FDR 0.039; TPR 0.000
+
+--------------------------------------------------
+Test AUC is 0.562545; balanced AUC is 0.562545
+Test accuracy 0.553; balanced accuracy 0.529; FDR 0.366; TPR 0.119
+
+Test sex accuracy 0.588; balanced accuracy 0.501; FDR 0.609; TPR 0.110
+
+Test sex gap RMS 0.044502618762237676
+Test race accuracy 0.613; balanced accuracy 0.529; FDR 0.348; TPR 0.089
+
+Test race gap RMS 0.04802179515926686
+Test STD accuracy 0.013; balanced accuracy 0.014; FDR 0.130; TPR 0.010
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3756.040946808876 6.6395676325703255 1730.9956375055058
+0.00011127719 5.6649045e-05 9.7087985e-05
+Counter success count is -1
+Epoch 1000 train accuracy 0.479631; loss 0.697328; lambda is 0.000010
+Epoch 1000 test accuracy 0.486742
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.694429; subspace 0.727325; adv 0.728451
+Train AUC is 0.567393; balanced AUC is 0.567393
+Train accuracy 0.480; balanced accuracy 0.494; FDR 0.533; TPR 0.740
+
+Train sex accuracy 0.439; balanced accuracy 0.520; FDR 0.633; TPR 0.801
+
+Train sex gap RMS 0.050692661290174454
+Train race accuracy 0.471; balanced accuracy 0.528; FDR 0.595; TPR 0.778
+
+Train race gap RMS 0.05506470302482685
+Train STD accuracy 0.016; balanced accuracy 0.004; FDR 0.019; TPR 0.011
+
+--------------------------------------------------
+Test AUC is 0.582115; balanced AUC is 0.582115
+Test accuracy 0.487; balanced accuracy 0.501; FDR 0.529; TPR 0.748
+
+Test sex accuracy 0.441; balanced accuracy 0.498; FDR 0.613; TPR 0.756
+
+Test sex gap RMS 0.014157586819573196
+Test race accuracy 0.464; balanced accuracy 0.510; FDR 0.590; TPR 0.750
+
+Test race gap RMS 0.020571987335918484
+Test STD accuracy 0.012; balanced accuracy 0.006; FDR 0.011; TPR 0.003
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+4889.862157080791 2.7335685976055437 2106.8083729586715
+0.00011132419 4.37041e-05 0.00010214024
+Counter success count is -1
+Epoch 2000 train accuracy 0.530317; loss 0.691243; lambda is 0.000010
+Epoch 2000 test accuracy 0.547348
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.687685; subspace 0.695789; adv 0.696645
+Train AUC is 0.592562; balanced AUC is 0.592562
+Train accuracy 0.530; balanced accuracy 0.535; FDR 0.499; TPR 0.623
+
+Train sex accuracy 0.555; balanced accuracy 0.578; FDR 0.581; TPR 0.656
+
+Train sex gap RMS 0.05473405830375107
+Train race accuracy 0.541; balanced accuracy 0.556; FDR 0.564; TPR 0.622
+
+Train race gap RMS 0.054826917551655044
+Train STD accuracy 0.007; balanced accuracy 0.011; FDR 0.008; TPR 0.017
+
+--------------------------------------------------
+Test AUC is 0.594846; balanced AUC is 0.594846
+Test accuracy 0.547; balanced accuracy 0.552; FDR 0.484; TPR 0.624
+
+Test sex accuracy 0.540; balanced accuracy 0.548; FDR 0.568; TPR 0.585
+
+Test sex gap RMS 0.04395776017104789
+Test race accuracy 0.507; balanced accuracy 0.515; FDR 0.583; TPR 0.554
+
+Test race gap RMS 0.07509662793096888
+Test STD accuracy 0.017; balanced accuracy 0.017; FDR 0.008; TPR 0.016
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.689020 to 0.688643; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695337 to 0.695299; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692591 to 0.691335; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692392 to 0.691658; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691328 to 0.690763; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692493 to 0.692108; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692117 to 0.688899; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689670 to 0.688364; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692195 to 0.691938; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693226 to 0.692516; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687617 to 0.687458; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689800 to 0.688841; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690887 to 0.687538; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688234 to 0.688222; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692333 to 0.691614; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690468 to 0.689460; resetting the attack
+Real and fair distances (max/min/mean):
+4616.663407700684 10.750774838678053 2261.4709923995892
+0.000111361674 7.2161085e-05 0.00010862542
+Counter success count is -1
+Epoch 3000 train accuracy 0.555898; loss 0.690258; lambda is 0.000010
+Epoch 3000 test accuracy 0.557765
+FAILED attacks: subspace 16; full 0; Nans after attack 0
+Loss clean 0.692032; subspace 0.701643; adv 0.702475
+Train AUC is 0.558841; balanced AUC is 0.558841
+Train accuracy 0.556; balanced accuracy 0.570; FDR 0.482; TPR 0.803
+
+Train sex accuracy 0.533; balanced accuracy 0.590; FDR 0.584; TPR 0.787
+
+Train sex gap RMS 0.05385964249959349
+Train race accuracy 0.532; balanced accuracy 0.569; FDR 0.562; TPR 0.737
+
+Train race gap RMS 0.10990550525568625
+Train STD accuracy 0.001; balanced accuracy 0.010; FDR 0.011; TPR 0.025
+
+--------------------------------------------------
+Test AUC is 0.551466; balanced AUC is 0.551466
+Test accuracy 0.558; balanced accuracy 0.571; FDR 0.480; TPR 0.793
+
+Test sex accuracy 0.526; balanced accuracy 0.572; FDR 0.562; TPR 0.780
+
+Test sex gap RMS 0.01763671493159295
+Test race accuracy 0.522; balanced accuracy 0.552; FDR 0.558; TPR 0.708
+
+Test race gap RMS 0.10769766040516252
+Test STD accuracy 0.002; balanced accuracy 0.010; FDR 0.002; TPR 0.036
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.692360 to 0.691935; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694470 to 0.692375; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689839 to 0.689183; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692561 to 0.691669; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693301 to 0.689070; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689065 to 0.688769; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692655 to 0.692642; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689723 to 0.689246; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692896 to 0.691469; resetting the attack
+Real and fair distances (max/min/mean):
+3631.5261889132275 38.3965735714872 2285.0159604500327
+0.00011627046 2.5245907e-05 0.00010784042
+Counter success count is -1
+Epoch 4000 train accuracy 0.551161; loss 0.689534; lambda is 0.000010
+Epoch 4000 test accuracy 0.55303
+FAILED attacks: subspace 25; full 0; Nans after attack 0
+Loss clean 0.684762; subspace 0.692278; adv 0.693031
+Train AUC is 0.553631; balanced AUC is 0.553631
+Train accuracy 0.551; balanced accuracy 0.564; FDR 0.485; TPR 0.789
+
+Train sex accuracy 0.530; balanced accuracy 0.587; FDR 0.586; TPR 0.780
+
+Train sex gap RMS 0.04945435798299303
+Train race accuracy 0.530; balanced accuracy 0.567; FDR 0.564; TPR 0.729
+
+Train race gap RMS 0.10402059239296546
+Train STD accuracy 0.000; balanced accuracy 0.010; FDR 0.011; TPR 0.025
+
+--------------------------------------------------
+Test AUC is 0.542230; balanced AUC is 0.542230
+Test accuracy 0.553; balanced accuracy 0.566; FDR 0.483; TPR 0.781
+
+Test sex accuracy 0.526; balanced accuracy 0.572; FDR 0.562; TPR 0.780
+
+Test sex gap RMS 0.012608426064696414
+Test race accuracy 0.522; balanced accuracy 0.551; FDR 0.558; TPR 0.702
+
+Test race gap RMS 0.10395349541326807
+Test STD accuracy 0.002; balanced accuracy 0.011; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.692605 to 0.691275; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688907 to 0.688563; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691002 to 0.690058; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689841 to 0.689184; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691256 to 0.690354; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692492 to 0.690979; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690680 to 0.690539; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693261 to 0.690543; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695188 to 0.694434; resetting the attack
+Real and fair distances (max/min/mean):
+4107.527486654278 305.6958908798023 2296.3653317066905
+0.00011131575 2.2924272e-05 0.0001076921
+Counter success count is -1
+Epoch 5000 train accuracy 0.546187; loss 0.689560; lambda is 0.000010
+Epoch 5000 test accuracy 0.549242
+FAILED attacks: subspace 34; full 0; Nans after attack 0
+Loss clean 0.686270; subspace 0.690487; adv 0.691253
+Train AUC is 0.559513; balanced AUC is 0.559513
+Train accuracy 0.546; balanced accuracy 0.559; FDR 0.488; TPR 0.775
+
+Train sex accuracy 0.528; balanced accuracy 0.583; FDR 0.588; TPR 0.773
+
+Train sex gap RMS 0.04692147531232022
+Train race accuracy 0.530; balanced accuracy 0.566; FDR 0.564; TPR 0.728
+
+Train race gap RMS 0.09577826259996217
+Train STD accuracy 0.001; balanced accuracy 0.008; FDR 0.012; TPR 0.023
+
+--------------------------------------------------
+Test AUC is 0.542496; balanced AUC is 0.542496
+Test accuracy 0.549; balanced accuracy 0.562; FDR 0.486; TPR 0.771
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.01113919890470001
+Test race accuracy 0.522; balanced accuracy 0.551; FDR 0.558; TPR 0.702
+
+Test race gap RMS 0.09406699620812085
+Test STD accuracy 0.000; balanced accuracy 0.008; FDR 0.004; TPR 0.033
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.691922 to 0.690906; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690326 to 0.690205; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690272 to 0.689416; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690257 to 0.689561; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692956 to 0.692530; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689715 to 0.689241; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688347 to 0.688141; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690010 to 0.688645; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690220 to 0.689548; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690911 to 0.690067; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689252 to 0.688162; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690095 to 0.689241; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690692 to 0.690095; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690462 to 0.690010; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690675 to 0.687891; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689207 to 0.688597; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690759 to 0.689754; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691209 to 0.689377; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690999 to 0.690370; resetting the attack
+Real and fair distances (max/min/mean):
+3347.0798494575147 47.4656562629696 2333.088081088181
+0.00011113247 4.3313194e-05 0.000105404804
+Counter success count is -1
+Epoch 6000 train accuracy 0.548792; loss 0.688772; lambda is 0.000010
+Epoch 6000 test accuracy 0.548295
+FAILED attacks: subspace 53; full 0; Nans after attack 0
+Loss clean 0.686320; subspace 0.690717; adv 0.691410
+Train AUC is 0.564072; balanced AUC is 0.564072
+Train accuracy 0.549; balanced accuracy 0.562; FDR 0.487; TPR 0.780
+
+Train sex accuracy 0.532; balanced accuracy 0.588; FDR 0.585; TPR 0.780
+
+Train sex gap RMS 0.048222810978886095
+Train race accuracy 0.528; balanced accuracy 0.563; FDR 0.566; TPR 0.722
+
+Train race gap RMS 0.10196147438004625
+Train STD accuracy 0.002; balanced accuracy 0.012; FDR 0.010; TPR 0.029
+
+--------------------------------------------------
+Test AUC is 0.545632; balanced AUC is 0.545632
+Test accuracy 0.548; balanced accuracy 0.560; FDR 0.486; TPR 0.765
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.008290677615341966
+Test race accuracy 0.519; balanced accuracy 0.547; FDR 0.561; TPR 0.690
+
+Test race gap RMS 0.09935204597732501
+Test STD accuracy 0.001; balanced accuracy 0.010; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.693419 to 0.691392; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691910 to 0.691628; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690864 to 0.689630; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690254 to 0.689935; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690533 to 0.690336; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688583 to 0.688206; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694143 to 0.693834; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695073 to 0.692916; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692482 to 0.691774; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689682 to 0.689519; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690033 to 0.689629; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688437 to 0.686782; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689549 to 0.688296; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688123 to 0.687449; resetting the attack
+Real and fair distances (max/min/mean):
+3632.3639531112594 94.16883200277856 2282.5267241532056
+0.000111147056 5.7293808e-05 0.00010620983
+Counter success count is -1
+Epoch 7000 train accuracy 0.545239; loss 0.688948; lambda is 0.000010
+Epoch 7000 test accuracy 0.544508
+FAILED attacks: subspace 67; full 0; Nans after attack 0
+Loss clean 0.684713; subspace 0.689632; adv 0.690290
+Train AUC is 0.566852; balanced AUC is 0.566852
+Train accuracy 0.545; balanced accuracy 0.558; FDR 0.489; TPR 0.767
+
+Train sex accuracy 0.528; balanced accuracy 0.582; FDR 0.588; TPR 0.770
+
+Train sex gap RMS 0.04370986263125267
+Train race accuracy 0.526; balanced accuracy 0.561; FDR 0.567; TPR 0.716
+
+Train race gap RMS 0.09340735717524311
+Train STD accuracy 0.001; balanced accuracy 0.011; FDR 0.010; TPR 0.027
+
+--------------------------------------------------
+Test AUC is 0.543839; balanced AUC is 0.543839
+Test accuracy 0.545; balanced accuracy 0.556; FDR 0.489; TPR 0.753
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.014062072220414612
+Test race accuracy 0.517; balanced accuracy 0.544; FDR 0.563; TPR 0.685
+
+Test race gap RMS 0.09139599665621125
+Test STD accuracy 0.002; balanced accuracy 0.011; FDR 0.001; TPR 0.042
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.688931 to 0.688391; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691454 to 0.691008; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692347 to 0.691642; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688504 to 0.687963; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689904 to 0.688430; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691697 to 0.690904; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690588 to 0.688165; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686386 to 0.685881; resetting the attack
+Real and fair distances (max/min/mean):
+4392.031786037473 35.84207877640207 2255.5021634562863
+0.000111138404 4.2316133e-05 8.136352e-05
+Counter success count is -1
+Epoch 8000 train accuracy 0.545476; loss 0.688284; lambda is 0.000010
+Epoch 8000 test accuracy 0.544508
+FAILED attacks: subspace 75; full 0; Nans after attack 0
+Loss clean 0.685624; subspace 0.689363; adv 0.689972
+Train AUC is 0.567249; balanced AUC is 0.567249
+Train accuracy 0.545; balanced accuracy 0.558; FDR 0.489; TPR 0.769
+
+Train sex accuracy 0.528; balanced accuracy 0.582; FDR 0.588; TPR 0.770
+
+Train sex gap RMS 0.044908855021346554
+Train race accuracy 0.526; balanced accuracy 0.561; FDR 0.567; TPR 0.717
+
+Train race gap RMS 0.09513911275144431
+Train STD accuracy 0.001; balanced accuracy 0.011; FDR 0.011; TPR 0.026
+
+--------------------------------------------------
+Test AUC is 0.543447; balanced AUC is 0.543447
+Test accuracy 0.545; balanced accuracy 0.556; FDR 0.489; TPR 0.753
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.014062072220414612
+Test race accuracy 0.517; balanced accuracy 0.544; FDR 0.563; TPR 0.685
+
+Test race gap RMS 0.09139599665621125
+Test STD accuracy 0.002; balanced accuracy 0.011; FDR 0.001; TPR 0.042
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.693837 to 0.693055; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688960 to 0.688771; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690191 to 0.689804; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687666 to 0.687581; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694089 to 0.692410; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690115 to 0.688999; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689181 to 0.689075; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690352 to 0.689823; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690910 to 0.690682; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687879 to 0.686823; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693513 to 0.693109; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687345 to 0.686843; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687659 to 0.687531; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689448 to 0.689408; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689712 to 0.687686; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688374 to 0.688065; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688306 to 0.686985; resetting the attack
+Real and fair distances (max/min/mean):
+4393.674256045883 16.72570314808163 2300.9221144217813
+0.000113141796 7.366321e-05 9.867002e-05
+Counter success count is -1
+Epoch 9000 train accuracy 0.545239; loss 0.688155; lambda is 0.000010
+Epoch 9000 test accuracy 0.547348
+FAILED attacks: subspace 92; full 0; Nans after attack 0
+Loss clean 0.682198; subspace 0.687745; adv 0.688354
+Train AUC is 0.563719; balanced AUC is 0.563719
+Train accuracy 0.545; balanced accuracy 0.558; FDR 0.489; TPR 0.770
+
+Train sex accuracy 0.527; balanced accuracy 0.581; FDR 0.589; TPR 0.766
+
+Train sex gap RMS 0.045831602526323685
+Train race accuracy 0.525; balanced accuracy 0.559; FDR 0.568; TPR 0.714
+
+Train race gap RMS 0.09728481920794807
+Train STD accuracy 0.001; balanced accuracy 0.011; FDR 0.010; TPR 0.026
+
+--------------------------------------------------
+Test AUC is 0.541129; balanced AUC is 0.541129
+Test accuracy 0.547; balanced accuracy 0.559; FDR 0.487; TPR 0.759
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.009342347422777664
+Test race accuracy 0.519; balanced accuracy 0.547; FDR 0.561; TPR 0.690
+
+Test race gap RMS 0.09146717501938734
+Test STD accuracy 0.001; balanced accuracy 0.010; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.691449 to 0.690959; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688853 to 0.688492; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691490 to 0.691178; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691619 to 0.689943; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693699 to 0.693242; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688770 to 0.687279; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686926 to 0.686448; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692040 to 0.690607; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691725 to 0.691311; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691155 to 0.689432; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689072 to 0.688801; resetting the attack
+Real and fair distances (max/min/mean):
+4851.69896683912 28.42916372952302 2364.178286159721
+0.000110906934 5.917476e-05 9.195839e-05
+Counter success count is -1
+Epoch 10000 train accuracy 0.545476; loss 0.687566; lambda is 0.000010
+Epoch 10000 test accuracy 0.546402
+FAILED attacks: subspace 103; full 0; Nans after attack 0
+Loss clean 0.687310; subspace 0.691799; adv 0.692375
+Train AUC is 0.573080; balanced AUC is 0.573080
+Train accuracy 0.545; balanced accuracy 0.558; FDR 0.489; TPR 0.769
+
+Train sex accuracy 0.529; balanced accuracy 0.583; FDR 0.587; TPR 0.770
+
+Train sex gap RMS 0.046659740220669634
+Train race accuracy 0.525; balanced accuracy 0.559; FDR 0.568; TPR 0.714
+
+Train race gap RMS 0.09602804302649513
+Train STD accuracy 0.002; balanced accuracy 0.012; FDR 0.010; TPR 0.028
+
+--------------------------------------------------
+Test AUC is 0.554058; balanced AUC is 0.554058
+Test accuracy 0.546; balanced accuracy 0.558; FDR 0.488; TPR 0.757
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.010876300105918607
+Test race accuracy 0.517; balanced accuracy 0.544; FDR 0.563; TPR 0.685
+
+Test race gap RMS 0.09484768741442996
+Test STD accuracy 0.002; balanced accuracy 0.011; FDR 0.001; TPR 0.042
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.691200 to 0.690879; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687446 to 0.687430; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687225 to 0.686804; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690170 to 0.689266; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688014 to 0.687226; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689100 to 0.686897; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687548 to 0.687516; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689272 to 0.688586; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687000 to 0.685466; resetting the attack
+Real and fair distances (max/min/mean):
+4160.404365878933 60.63666584008272 2321.8875299049123
+0.00011111895 5.3585776e-05 8.700601e-05
+Counter success count is -1
+Epoch 11000 train accuracy 0.545476; loss 0.687420; lambda is 0.000010
+Epoch 11000 test accuracy 0.546402
+FAILED attacks: subspace 112; full 0; Nans after attack 0
+Loss clean 0.685972; subspace 0.689691; adv 0.690245
+Train AUC is 0.574711; balanced AUC is 0.574711
+Train accuracy 0.545; balanced accuracy 0.558; FDR 0.489; TPR 0.769
+
+Train sex accuracy 0.529; balanced accuracy 0.583; FDR 0.587; TPR 0.770
+
+Train sex gap RMS 0.046659740220669634
+Train race accuracy 0.525; balanced accuracy 0.559; FDR 0.568; TPR 0.714
+
+Train race gap RMS 0.09602804302649513
+Train STD accuracy 0.002; balanced accuracy 0.012; FDR 0.010; TPR 0.028
+
+--------------------------------------------------
+Test AUC is 0.552798; balanced AUC is 0.552798
+Test accuracy 0.546; balanced accuracy 0.558; FDR 0.488; TPR 0.757
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.010876300105918607
+Test race accuracy 0.517; balanced accuracy 0.544; FDR 0.563; TPR 0.685
+
+Test race gap RMS 0.09484768741442996
+Test STD accuracy 0.002; balanced accuracy 0.011; FDR 0.001; TPR 0.042
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.687636 to 0.686568; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687026 to 0.686620; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686521 to 0.685469; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689204 to 0.687985; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687989 to 0.687678; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687629 to 0.687098; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690674 to 0.689237; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691516 to 0.690273; resetting the attack
+Real and fair distances (max/min/mean):
+4791.682860262925 69.97276505371457 2336.2294175691372
+0.000111160516 4.3111275e-05 8.37513e-05
+Counter success count is -1
+Epoch 12000 train accuracy 0.547845; loss 0.687657; lambda is 0.000010
+Epoch 12000 test accuracy 0.550189
+FAILED attacks: subspace 120; full 0; Nans after attack 0
+Loss clean 0.684733; subspace 0.687137; adv 0.687672
+Train AUC is 0.571692; balanced AUC is 0.571692
+Train accuracy 0.548; balanced accuracy 0.561; FDR 0.487; TPR 0.779
+
+Train sex accuracy 0.532; balanced accuracy 0.588; FDR 0.585; TPR 0.780
+
+Train sex gap RMS 0.04905280742781585
+Train race accuracy 0.528; balanced accuracy 0.565; FDR 0.565; TPR 0.726
+
+Train race gap RMS 0.09736737647503967
+Train STD accuracy 0.002; balanced accuracy 0.012; FDR 0.010; TPR 0.027
+
+--------------------------------------------------
+Test AUC is 0.554263; balanced AUC is 0.554263
+Test accuracy 0.550; balanced accuracy 0.562; FDR 0.485; TPR 0.765
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.005392055012823941
+Test race accuracy 0.519; balanced accuracy 0.547; FDR 0.561; TPR 0.690
+
+Test race gap RMS 0.09667233475081281
+Test STD accuracy 0.001; balanced accuracy 0.010; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.691253 to 0.690588; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687005 to 0.686608; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689964 to 0.689478; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692091 to 0.691834; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689467 to 0.689404; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687879 to 0.684059; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690083 to 0.689644; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686939 to 0.686360; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690184 to 0.688916; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687033 to 0.686787; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682844 to 0.682786; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687790 to 0.687518; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689935 to 0.689679; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687968 to 0.684875; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690419 to 0.689907; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683401 to 0.682968; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687360 to 0.686629; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687080 to 0.686387; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691094 to 0.689946; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688026 to 0.687523; resetting the attack
+Real and fair distances (max/min/mean):
+7230.130449169923 370.0304249463131 2226.866483841158
+0.00011091108 4.271831e-05 6.511827e-05
+Counter success count is -1
+Epoch 13000 train accuracy 0.547845; loss 0.687149; lambda is 0.000010
+Epoch 13000 test accuracy 0.550189
+FAILED attacks: subspace 140; full 0; Nans after attack 0
+Loss clean 0.687041; subspace 0.687647; adv 0.688171
+Train AUC is 0.572609; balanced AUC is 0.572609
+Train accuracy 0.548; balanced accuracy 0.561; FDR 0.487; TPR 0.777
+
+Train sex accuracy 0.534; balanced accuracy 0.589; FDR 0.583; TPR 0.780
+
+Train sex gap RMS 0.05054740540407666
+Train race accuracy 0.528; balanced accuracy 0.564; FDR 0.566; TPR 0.725
+
+Train race gap RMS 0.09436791460423057
+Train STD accuracy 0.003; balanced accuracy 0.013; FDR 0.009; TPR 0.028
+
+--------------------------------------------------
+Test AUC is 0.551549; balanced AUC is 0.551549
+Test accuracy 0.550; balanced accuracy 0.562; FDR 0.485; TPR 0.765
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.005392055012823941
+Test race accuracy 0.519; balanced accuracy 0.547; FDR 0.561; TPR 0.690
+
+Test race gap RMS 0.09667233475081281
+Test STD accuracy 0.001; balanced accuracy 0.010; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.689327 to 0.689154; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690917 to 0.690741; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689831 to 0.688463; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685246 to 0.683801; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688531 to 0.688390; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689312 to 0.688335; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684390 to 0.684103; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688052 to 0.687439; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685929 to 0.685852; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687926 to 0.687262; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683127 to 0.682427; resetting the attack
+Real and fair distances (max/min/mean):
+5491.592090510266 375.7305221930254 2254.8848154762563
+0.000110495865 4.293751e-05 8.444664e-05
+Counter success count is -1
+Epoch 14000 train accuracy 0.548318; loss 0.686258; lambda is 0.000010
+Epoch 14000 test accuracy 0.556818
+FAILED attacks: subspace 151; full 0; Nans after attack 0
+Loss clean 0.685536; subspace 0.693055; adv 0.693577
+Train AUC is 0.584951; balanced AUC is 0.584951
+Train accuracy 0.548; balanced accuracy 0.561; FDR 0.487; TPR 0.783
+
+Train sex accuracy 0.532; balanced accuracy 0.588; FDR 0.585; TPR 0.780
+
+Train sex gap RMS 0.05117828301282553
+Train race accuracy 0.528; balanced accuracy 0.565; FDR 0.565; TPR 0.726
+
+Train race gap RMS 0.10191844274140804
+Train STD accuracy 0.002; balanced accuracy 0.012; FDR 0.010; TPR 0.027
+
+--------------------------------------------------
+Test AUC is 0.561789; balanced AUC is 0.561789
+Test accuracy 0.557; balanced accuracy 0.569; FDR 0.481; TPR 0.779
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.009822660383770967
+Test race accuracy 0.519; balanced accuracy 0.547; FDR 0.561; TPR 0.690
+
+Test race gap RMS 0.10933397135427123
+Test STD accuracy 0.001; balanced accuracy 0.010; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.685707 to 0.685226; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684124 to 0.683762; resetting the attack
+Real and fair distances (max/min/mean):
+6058.6707736402 14.08395636216439 2195.06799818624
+0.00011068199 4.2605636e-05 8.254787e-05
+Counter success count is -1
+Epoch 15000 train accuracy 0.550450; loss 0.686033; lambda is 0.000010
+Epoch 15000 test accuracy 0.555871
+FAILED attacks: subspace 153; full 0; Nans after attack 0
+Loss clean 0.684751; subspace 0.702956; adv 0.703506
+Train AUC is 0.592023; balanced AUC is 0.592023
+Train accuracy 0.550; balanced accuracy 0.564; FDR 0.486; TPR 0.793
+
+Train sex accuracy 0.532; balanced accuracy 0.589; FDR 0.584; TPR 0.787
+
+Train sex gap RMS 0.05242113701080272
+Train race accuracy 0.529; balanced accuracy 0.567; FDR 0.564; TPR 0.735
+
+Train race gap RMS 0.10358744584986881
+Train STD accuracy 0.001; balanced accuracy 0.011; FDR 0.010; TPR 0.026
+
+--------------------------------------------------
+Test AUC is 0.568607; balanced AUC is 0.568607
+Test accuracy 0.556; balanced accuracy 0.568; FDR 0.481; TPR 0.779
+
+Test sex accuracy 0.521; balanced accuracy 0.566; FDR 0.566; TPR 0.768
+
+Test sex gap RMS 0.01065884757522189
+Test race accuracy 0.519; balanced accuracy 0.547; FDR 0.561; TPR 0.690
+
+Test race gap RMS 0.11050516798221363
+Test STD accuracy 0.001; balanced accuracy 0.010; FDR 0.002; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.688035 to 0.687516; resetting the attack
+Real and fair distances (max/min/mean):
+5184.2102565766145 149.1421436267029 2402.054254278866
+0.00011068199 4.2605636e-05 8.254787e-05
+Counter success count is -1
+Epoch 15999 train accuracy 0.552345; loss 0.686599; lambda is 0.000010
+Epoch 15999 test accuracy 0.558712
+FAILED attacks: subspace 154; full 0; Nans after attack 0
+Loss clean 0.682371; subspace 0.689394; adv 0.689959
+Train AUC is 0.590845; balanced AUC is 0.590845
+Train accuracy 0.552; balanced accuracy 0.566; FDR 0.484; TPR 0.802
+
+Train sex accuracy 0.535; balanced accuracy 0.593; FDR 0.582; TPR 0.790
+
+Train sex gap RMS 0.06013077099294988
+Train race accuracy 0.530; balanced accuracy 0.569; FDR 0.563; TPR 0.742
+
+Train race gap RMS 0.10629799143876308
+Train STD accuracy 0.003; balanced accuracy 0.012; FDR 0.010; TPR 0.024
+
+--------------------------------------------------
+Test AUC is 0.573862; balanced AUC is 0.573862
+Test accuracy 0.559; balanced accuracy 0.571; FDR 0.479; TPR 0.787
+
+Test sex accuracy 0.526; balanced accuracy 0.572; FDR 0.562; TPR 0.780
+
+Test sex gap RMS 0.009313772447941661
+Test race accuracy 0.519; balanced accuracy 0.548; FDR 0.560; TPR 0.696
+
+Test race gap RMS 0.11098199570636419
+Test STD accuracy 0.003; balanced accuracy 0.012; FDR 0.001; TPR 0.042
+
+--------------------------------------------------
+
+Final train accuracy 0.552345
+Final test accuracy 0.558712
+Final lambda 0.000010
+Gender:
+Accuracy is 0.558712
+Balanced accuracy is 0.571357
+Gap RMS is 0.00931377244794163
+Mean absolute gap is 0.009158357764580682
+Max gap is 0.010852713178294504
+Average odds difference is 0.009158
+Equal opportunity difference is 0.007464
+Statistical parity difference is 0.024033
+
+Race:
+Accuracy is 0.558712
+Balanced accuracy is 0.571357
+Gap RMS is 0.11098199570636419
+Mean absolute gap is 0.10702415815938071
+Max gap is 0.1363981762917933
+Average odds difference is 0.107024
+Equal opportunity difference is 0.136398
+Statistical parity difference is 0.118389

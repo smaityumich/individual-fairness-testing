@@ -52,7 +52,7 @@ def run_sensr(seed_data, seed_model, save_model = True):
     weights, train_logits, test_logits, _, variables = train_fair_nn(x_train, y_train, tf_prefix='sensr', adv_epoch_full=50, l2_attack=0.0001,
                                           adv_epoch=10, ro=0.001, adv_step=10., plot=save_model, fair_info=fair_info, balance_batch=True, 
                                           X_test = x_test, X_test_counter=None, y_test = y_test, lamb_init=2., 
-                                          n_units=[100], l2_reg=0, epoch=16000, batch_size=1000, lr=8e-5, lambda_clp=0.,
+                                          n_units=[100], l2_reg=0, epoch=16000, batch_size=1000, lr=10e-5, lambda_clp=0.,
                                           fair_start=0., counter_init=False, seed=seed_model)
 
     print('Gender:')
