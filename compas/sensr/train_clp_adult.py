@@ -6,6 +6,7 @@ from collections import OrderedDict
 import sys
 import os
 from sklearn.metrics import roc_auc_score
+from datetime import datetime
 
 def get_consistency(X, l_pred, tf_X, relationship_idx = [33, 34, 35, 36, 37, 38], husband_idx = 33, wife_idx = 38):
 
@@ -530,8 +531,12 @@ def train_fair_nn(X_train, y_train, tf_prefix='', X_test=None, X_test_counter=No
     failed_attack_count = 0
     failed_full_attack = 0
     failed_subspace_attack = 0
-     
-    tb_long = '_'.join(['fair-dim:' + str(K_protected), 'adv-epoch:' + str(adv_epoch), 
+    
+
+    now = datetime.now()
+
+    current_time = now.strftime("%H:%M:%S")
+    tb_long = '_'.join(['time:'+ current_time  +'fair-dim:' + str(K_protected), 'adv-epoch:' + str(adv_epoch), 
                         'batch_size:' + str(batch_size), 'adv-step:' + str(adv_step), 
                         'l2_attack:' + str(l2_attack), 'adv_epoch_full:' + str(adv_epoch_full), 
                         'ro:' + str(ro), 'balanced:' + str(balance_batch), 'lr:' + str(lr), 
