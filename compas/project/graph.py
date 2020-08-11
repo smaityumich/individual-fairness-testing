@@ -22,9 +22,10 @@ for i in range(10):
     init_graph = utils.ClassifierGraph([50,], 2, sensetive_directions = sensetive_directions,\
      input_shape=(5, ), seed_model=expt_seed)
     graph = cl.Classifier(init_graph, x_train, y_train, num_steps = 8000, seed = expt_seed) # use for unfair algo
-    #graph.model._set_inputs((-1, 39))
+    #graph.model._set_inputs((-1, 5))
     inputs = keras.Input((5,))
 
     outputs = graph(inputs)
     model = keras.Model(inputs, outputs)
     model.save(f'graphs/graph_{data_seed}_{expt_seed}')
+    #graph.model.save(f'graphs/graph_{data_seed}_{expt_seed}')

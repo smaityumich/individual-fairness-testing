@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from adult_modified import preprocess_adult_data
+from data_preprocess import get_data
 from sklearn import linear_model
 import utils
 import time
@@ -26,13 +26,7 @@ if __name__ == '__main__':
      seed_data, seed_model = int(float(sys.argv[1])), int(float(sys.argv[2]))
      lr = float(sys.argv[3])
 
-     dataset_orig_train, dataset_orig_test = preprocess_adult_data(seed = seed_data)
-
-     x_unprotected_train, x_protected_train = dataset_orig_train.features[:, :39], dataset_orig_train.features[:, 39:]
-     x_unprotected_test, x_protected_test = dataset_orig_test.features[:, :39], dataset_orig_test.features[:, 39:]
-     y_train, y_test = dataset_orig_train.labels.reshape((-1,)), dataset_orig_test.labels.reshape((-1,))
-
-     x_unprotected_train, x_unprotected_test = tf.cast(x_unprotected_train, dtype = tf.float32), tf.cast(x_unprotected_test, dtype = tf.float32)
+     x_train, x_test, y_train, y_test, _, y_sex_test, y_race_test = get_data(seed_data)
 
 
      with open(f'./sensr/models/data_{seed_data}_{seed_model}.txt', 'r') as f:
@@ -50,11 +44,12 @@ if __name__ == '__main__':
 
 
  
-     prob = graph(x_unprotected_test)
+     prob = graph(x_test)
      y_pred = tf.argmax(prob, axis = 1)
      y_pred = y_pred.numpy()
-     gender = dataset_orig_test.features[:, 39]
-     race = dataset_orig_test.features[:, 40]
+     gender = y_sex_test
+     race = y_race_test
+     y_test = y_test.numpy()
      
      print('\n\nMeasures for gender\n')
      accuracy, bal_acc, \

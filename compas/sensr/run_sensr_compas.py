@@ -1,5 +1,4 @@
 import numpy as np
-from adult_data import preprocess_adult_data
 from sklearn.linear_model import LogisticRegression
 from metrics import group_metrics
 from sklearn.preprocessing import OneHotEncoder
@@ -7,7 +6,6 @@ from train_clp_adult import train_fair_nn
 import tensorflow.compat.v1 as tf
 import json
 import sys
-from data_preprocess import get_data
 from sklearn import linear_model
 import compas_data as compas
 
