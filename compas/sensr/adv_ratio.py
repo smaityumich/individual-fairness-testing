@@ -53,7 +53,7 @@ def sample_perturbation(data_point, regularizer = 100, learning_rate = 5e-2, num
         gradient = g.gradient(loss, x)
         x = x + learning_rate * gradient /(i**(2/3))
     return_loss = utils.EntropyLoss(y, graph(x)) / utils.EntropyLoss(y, graph(x_start))
-    #print('done')
+    print('done')
     
     return return_loss.numpy()
 
@@ -79,8 +79,8 @@ if __name__ == '__main__':
 
     sensetive_directions = scipy.linalg.orth(sensetive_directions.T).T
     for i, s in enumerate(sensetive_directions):
-        while np.linalg.norm(s) != 1:
-            s = s/ np.linalg.norm(s)
+        #while np.linalg.norm(s) != 1:
+        s = s/ np.linalg.norm(s)
         sensetive_directions[i] = s
     sensetive_directions = tf.cast(sensetive_directions, dtype = tf.float32)
 

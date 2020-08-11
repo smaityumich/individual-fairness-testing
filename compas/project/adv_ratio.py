@@ -65,8 +65,8 @@ if __name__ == '__main__':
 
     sensetive_directions = scipy.linalg.orth(sensetive_directions.T).T
     for i, s in enumerate(sensetive_directions):
-        while np.linalg.norm(s) != 1:
-            s = s/ np.linalg.norm(s)
+        #while np.linalg.norm(s) != 1:
+        s = s/ np.linalg.norm(s)
         sensetive_directions[i] = s
     sensetive_directions = tf.cast(sensetive_directions, dtype = tf.float32)
 
