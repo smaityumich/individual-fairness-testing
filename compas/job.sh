@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=test-std-node
 #SBATCH --output=logs/create_fluctuations_%A_%a.out
-#SBATCH --array=0-4999
+#SBATCH --array=0-399
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1gb

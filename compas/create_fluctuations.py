@@ -35,15 +35,16 @@ def part_fluc(args):
         os.system(f'python3 ./{expt}/adv_ratio.py {start} {end} {data_seed} {expt_seed} {lr}')
 
 if __name__ == '__main__':
-    starts = np.arange(0, 901, 10)
-    ends = np.arange(10, 1001, 10)
-    expts = ['sensr', 'reduction', 'baseline', 'project'] 
+    starts = np.arange(0, 901, 100)
+    ends = np.arange(100, 1001, 100)
+    expts = ['project', 'reduction', 'sensr', 'baseline'] 
     data_index = range(ends.shape[0])
     iteration = range(10)
-    lrs = [2e-3, 5e-3, 1e-2]
+    lrs = [2e-3]
 
     a = itertools.product(expts, data_index, iteration, lrs)
     b = [i for i in a]
     i = int(sys.argv[1])
+    print(b[i])
     part_fluc(b[i])
 
