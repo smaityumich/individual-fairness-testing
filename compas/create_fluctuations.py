@@ -17,7 +17,7 @@ def part_fluc(args):
         #seeds = np.random.randint(100000, size = (10, ))
         seed = seeds[i, 0]
         os.system(f'python3 ./{expt}/adv_ratio.py {start} {end} {seed} {lr}')
-    elif expt == 'baseline_bal':
+    elif expt == 'project':
         #seeds = np.random.randint(10000, size = (10, 2))
         data_seed = seeds[i, 0]
         expt_seed = seeds[i, 1]
@@ -35,9 +35,9 @@ def part_fluc(args):
         os.system(f'python3 ./{expt}/adv_ratio.py {start} {end} {data_seed} {expt_seed} {lr}')
 
 if __name__ == '__main__':
-    starts = np.arange(0, 901, 100)
-    ends = np.arange(100, 1001, 200)
-    expts = ['sensr', 'reduction', 'baseline', 'baseline_bal'] 
+    starts = np.arange(0, 901, 10)
+    ends = np.arange(10, 1001, 10)
+    expts = ['sensr', 'reduction', 'baseline', 'project'] 
     data_index = range(ends.shape[0])
     iteration = range(10)
     lrs = [2e-3, 5e-3, 1e-2]
