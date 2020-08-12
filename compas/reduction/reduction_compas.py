@@ -10,12 +10,12 @@ import json
 np.random.seed(1)
 # Adult data processing
 seeds = np.load('../seeds.npy')
-for i in range(10):
+for i in range(1):
     data_seed = seeds[i, 0]
     print(f'Running data seed {data_seed}')
     x_train,x_test, y_train, y_test, y_sex_train, y_sex_test, y_race_train, y_race_test,\
          feature_names = get_compas_train_test(random_state = data_seed)
-    x_train, x_test = x_train[:, 2:], x_test[:, 2:]
+    #x_train, x_test = x_train[:, 2:], x_test[:, 2:]
 
     group_train_cross = y_sex_train + 2*y_race_train
     group_test_cross = y_sex_test + 2*y_race_test
@@ -24,7 +24,7 @@ for i in range(10):
 
     #### Using 4 protected attributes ####
     ## Reduction classifier
-    eps = 0.16
+    eps = 0.05
     constraint = EqualizedOdds()
     classifier = LogisticRegression(solver='liblinear', fit_intercept=True)
     mitigator = ExponentiatedGradient(classifier, constraint, eps=eps, T=50)

@@ -8,6 +8,7 @@ import json
 import sys
 from sklearn import linear_model
 import compas_data as compas
+import utils
 
 def standardize(x):
     return (x - np.mean(x))/np.std(x)
@@ -19,8 +20,10 @@ def run_sensr(seed_data, seed_model, save_model = True):
     # Extracting compas data
     x_train, x_test, y_train, y_test, y_sex_train, y_sex_test,\
         y_race_train, y_race_test, _ = compas.get_compas_train_test(random_state = seed_data)
-    group_train, group_test = x_train[:, :2], x_test[:, :2]
-    x_train, x_test = x_train[:, 2:], x_test[:, 2:]
+    group_train, group_test = np.copy(x_train[:, :2]), np.copy(x_test[:, :2])
+    y_sex_train, y_sex_test, y_race_train, y_race_test = np.copy(y_sex_train), np.copy(y_sex_test),\
+        np.copy(y_race_train), np.copy(y_race_test)
+    
     
     group_names = ['sex', 'race']
 
@@ -30,25 +33,22 @@ def run_sensr(seed_data, seed_model, save_model = True):
     names_income = one_hot.categories_
     y_train = one_hot.transform(y_train.reshape(-1,1))
     y_test = one_hot.transform(y_test.reshape(-1,1))
-
+    
     # Standardizing the last four columns
-    for i in range(1, 5):
-        x_train[:, i] = standardize(x_train[:, i])
-        x_test[:, i] = standardize(x_test[:, i])
+    #for i in range(7):
+    #    if i != 2:
+    #        x_train[:, i] = standardize(x_train[:, i])
+    #        x_test[:, i] = standardize(x_test[:, i])
+
+    
 
     # Calculate the sensitive directions
-    sensetive_directions = []
-    protected_regression = linear_model.LogisticRegression(fit_intercept = True)
-    protected_regression.fit(x_train, y_sex_train)
-    sensetive_directions.append(protected_regression.coef_.reshape((-1,)))
-    protected_regression.fit(x_train, y_race_train)
-    sensetive_directions.append(protected_regression.coef_.reshape((-1,)))
-    sensetive_directions = np.array(sensetive_directions)
+    sensetive_directions, _ = utils.sensitive_dir(x_train, y_sex_train, y_race_train)
 
     tf.reset_default_graph()
     fair_info = [group_train, group_test, group_names, sensetive_directions]
-    weights, train_logits, test_logits, _, variables = train_fair_nn(x_train, y_train, tf_prefix='sensr', adv_epoch_full=50, l2_attack=0.0001,
-                                          adv_epoch=10, ro=0.001, adv_step=10., plot=save_model, fair_info=fair_info, balance_batch=True, 
+    weights, train_logits, test_logits, _, variables = train_fair_nn(x_train, y_train, tf_prefix='sensr', adv_epoch_full=8, l2_attack=0.0001,
+                                          adv_epoch=10, ro=0.001, adv_step=0.1, plot=save_model, fair_info=fair_info, balance_batch=True, 
                                           X_test = x_test, X_test_counter=None, y_test = y_test, lamb_init=2., 
                                           n_units=[100], l2_reg=0, epoch=16000, batch_size=1000, lr=10e-5, lambda_clp=0.,
                                           fair_start=0., counter_init=False, seed=seed_model)
@@ -71,4 +71,5 @@ if __name__ == "__main__":
     i = int(sys.argv[1])
     seed_data = seeds[i, 0]
     seed_model = seeds[i, 1]
+    print(f'Running for {seed_data} {seed_model}\n\n')
     run_sensr(seed_data, seed_model)

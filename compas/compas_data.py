@@ -116,7 +116,7 @@ def get_compas_orig():
     return dataset_orig
 
 
-def get_compas_train_test(pct=0.8):
+def get_compas_train_test(pct=0.8, random_state = 0):
     
     dataset_orig = get_compas_orig()
     
@@ -132,7 +132,7 @@ def get_compas_train_test(pct=0.8):
     # Get the dataset and split into train and test
     # dataset_orig_train, dataset_orig_test = dataset_orig.split([pct], shuffle=True)
     X, y = dataset_orig.features, dataset_orig.labels
-    X_train, X_test, y_train, y_test = train_test_split(X,y, train_size=pct, stratify=y)
+    X_train, X_test, y_train, y_test = train_test_split(X,y, train_size=pct, stratify=y, random_state = random_state)
     
     y_train = np.reshape(y_train, (-1, ))
     y_test = np.reshape(y_test, (-1, ))

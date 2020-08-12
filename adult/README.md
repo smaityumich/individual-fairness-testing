@@ -1,4 +1,4 @@
-# Individual Fairness Testing for *Adult* data
+# Individual Fairness Testing for **Adult** data
 
 The proposed test is applied on four different ML models fitted on Adult data: baseline, project, reduction and SenSR. 
 Two protected attributes are considered: gender and race. The baseline  is obtained by simple 2 layer neural net on adult data,

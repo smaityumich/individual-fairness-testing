@@ -12,24 +12,25 @@ plt.ioff()
 import sys
 import json
 from scipy.stats import norm
-from data_preprocess import get_data
+from compas_data import get_compas_train_test
 
 if __name__ == '__main__':
      seed_data, seed_model = int(float(sys.argv[1])), int(float(sys.argv[2]))
      lr = float(sys.argv[3])
 
-     x_train, x_test, y_train, y_test, _, y_sex_test, y_race_test = get_data(seed_data)
+     x_train, x_test, y_train, y_test, y_sex_train, y_sex_test, y_race_train,\
+          y_race_test, feature_names = get_compas_train_test(random_state = seed_data)
 
      graph = tf.keras.models.load_model(f'./project/graphs/graph_{seed_data}_{seed_model}')
 
 
- 
+     x_test = tf.cast(x_test, dtype = tf.float32)
      prob = graph(x_test)
      y_pred = tf.argmax(prob, axis = 1)
      y_pred = y_pred.numpy()
      gender = y_sex_test
      race = y_race_test
-     y_test = y_test.numpy()[:, 1]
+     #y_test = y_test.numpy()[:, 1]
      
      print('\n\nMeasures for gender\n')
      accuracy, bal_acc, \
@@ -45,7 +46,7 @@ if __name__ == '__main__':
 
      
 
-     filename = f'./project/outcome/perturbed_ratio_0_to_200_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
+     filename = f'./project/outcome/perturbed_ratio_0_to_1000_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
      a = np.load(filename)
      a = a[np.isfinite(a)]
      lb = np.mean(a) - 1.645*np.std(a)/np.sqrt(a.shape[0])
