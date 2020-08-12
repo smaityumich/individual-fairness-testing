@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from data_preprocess import get_data
+from compas_data import get_compas_train_test
 from sklearn import linear_model
 import utils
 import time
@@ -18,7 +18,8 @@ if __name__ == '__main__':
      seed_data = int(float(sys.argv[1]))
      lr = float(sys.argv[2])
 
-     x_train, x_test, y_train, y_test, _, y_sex_test, y_race_test = get_data(seed_data)
+     x_train, x_test, y_train, y_test, y_sex_train, y_sex_test, y_race_train,\
+          y_race_test, feature_names = get_compas_train_test(random_state = seed_data)
 
      with open(f'./reduction/models/data_{seed_data}.txt', 'r') as f:
         data = json.load(f)
@@ -44,13 +45,13 @@ if __name__ == '__main__':
           return tf.concat([1-prob, prob], axis = 1)
 
 
- 
+     x_test = tf.cast(x_test, dtype = tf.float32)
      prob = graph(x_test)
      y_pred = tf.argmax(prob, axis = 1)
      y_pred = y_pred.numpy()
      gender = y_sex_test
      race = y_race_test
-     y_test = y_test.numpy()[:, 1]
+     #y_test = y_test.numpy()[:, 1]
      
      print('\n\nMeasures for gender\n')
      accuracy, bal_acc, \

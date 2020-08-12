@@ -31,7 +31,7 @@ if __name__ == '__main__':
     
     expts = ['baseline', 'project', 'sensr', 'reduction'] 
     iteration = range(10)
-    lrs = [1e-1]#, 6e-2, 65e-3]
+    lrs = [2e-2, 5e-3]#, 6e-2, 65e-3]
 
     a = itertools.product(expts, iteration, lrs)
     b = [i for i in a]
