@@ -47,7 +47,7 @@ def run_sensr(seed_data, seed_model, save_model = True):
 
     tf.reset_default_graph()
     fair_info = [group_train, group_test, group_names, sensetive_directions]
-    weights, train_logits, test_logits, _, variables = train_fair_nn(x_train, y_train, tf_prefix='sensr', adv_epoch_full=10, l2_attack=0.0001,
+    weights, train_logits, test_logits, _, variables = train_fair_nn(x_train, y_train, tf_prefix='sensr', adv_epoch_full=8, l2_attack=0.0001,
                                           adv_epoch=10, ro=0.001, adv_step=0.1, plot=save_model, fair_info=fair_info, balance_batch=True, 
                                           X_test = x_test, X_test_counter=None, y_test = y_test, lamb_init=2., 
                                           n_units=[100], l2_reg=0, epoch=16000, batch_size=1000, lr=10e-5, lambda_clp=0.,
