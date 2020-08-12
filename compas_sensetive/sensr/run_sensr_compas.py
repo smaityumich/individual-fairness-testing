@@ -71,4 +71,5 @@ if __name__ == "__main__":
     i = int(sys.argv[1])
     seed_data = seeds[i, 0]
     seed_model = seeds[i, 1]
+    print(f'Running for {seed_data} {seed_model}\n\n')
     run_sensr(seed_data, seed_model)
