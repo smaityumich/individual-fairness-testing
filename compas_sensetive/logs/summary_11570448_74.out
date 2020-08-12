@@ -1,0 +1,50 @@
+SLURM_JOBID:  11570523
+SLURM_ARRAY_TASK_ID:  74
+SLURM_ARRAY_JOB_ID:  11570448
+2020-08-11 22:43:33.516432: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arcts/centos7/python3.6-anaconda/5.2.0/lib:/opt/slurm/lib64::
+2020-08-11 22:43:33.516608: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-08-11 22:43:33.516631: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gl3044.arc-ts.umich.edu): /proc/driver/nvidia/version does not exist
+2020-08-11 22:43:33.516818: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-11 22:43:33.523795: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-11 22:43:33.523891: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55783e227960 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-11 22:43:33.523902: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+/home/smaity/.local/lib/python3.6/site-packages/numpy/core/fromnumeric.py:3335: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+/home/smaity/.local/lib/python3.6/site-packages/numpy/core/_methods.py:161: RuntimeWarning: invalid value encountered in true_divide
+  ret = ret.dtype.type(ret / rcount)
+/home/smaity/.local/lib/python3.6/site-packages/numpy/core/_methods.py:217: RuntimeWarning: Degrees of freedom <= 0 for slice
+  keepdims=keepdims)
+/home/smaity/.local/lib/python3.6/site-packages/numpy/core/_methods.py:186: RuntimeWarning: invalid value encountered in true_divide
+  arrmean, rcount, out=arrmean, casting='unsafe', subok=False)
+/home/smaity/.local/lib/python3.6/site-packages/numpy/core/_methods.py:209: RuntimeWarning: invalid value encountered in true_divide
+  ret = ret.dtype.type(ret / rcount)
+(5278, 8)
+['sex', 'race', 'priors_count', 'age_cat=25 to 45', 'age_cat=Greater than 45', 'age_cat=Less than 25', 'c_charge_degree=F', 'c_charge_degree=M']
+sex
+race
+
+
+Measures for gender
+
+Accuracy is 0.625947
+Balanced accuracy is 0.621808
+Gap RMS is 0.09833833693877772
+Mean absolute gap is 0.07352511503083178
+Max gap is 0.1388281469021586
+Average odds difference is 0.073525
+Equal opportunity difference is 0.138828
+Statistical parity difference is 0.086316
+
+
+
+Measures for race
+
+Accuracy is 0.625947
+Balanced accuracy is 0.621808
+Gap RMS is 0.22657076855543176
+Mean absolute gap is 0.2265501540040809
+Max gap is 0.22960644007155634
+Average odds difference is 0.226550
+Equal opportunity difference is 0.229606
+Statistical parity difference is 0.258183

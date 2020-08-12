@@ -1,0 +1,39 @@
+SLURM_JOBID:  11570597
+SLURM_ARRAY_TASK_ID:  148
+SLURM_ARRAY_JOB_ID:  11570448
+2020-08-11 22:43:35.426546: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arcts/centos7/python3.6-anaconda/5.2.0/lib:/opt/slurm/lib64::
+2020-08-11 22:43:35.426691: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-08-11 22:43:35.426716: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gl3049.arc-ts.umich.edu): /proc/driver/nvidia/version does not exist
+2020-08-11 22:43:35.427047: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-11 22:43:35.434647: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-11 22:43:35.434743: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556c5298ce60 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-11 22:43:35.434755: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+(5278, 8)
+['sex', 'race', 'priors_count', 'age_cat=25 to 45', 'age_cat=Greater than 45', 'age_cat=Less than 25', 'c_charge_degree=F', 'c_charge_degree=M']
+sex
+race
+
+
+Measures for gender
+
+Accuracy is 0.648674
+Balanced accuracy is 0.646622
+Gap RMS is 0.07571060575530712
+Mean absolute gap is 0.05713686240354712
+Max gap is 0.10681054536055834
+Average odds difference is 0.057137
+Equal opportunity difference is 0.106811
+Statistical parity difference is 0.094258
+
+
+
+Measures for race
+
+Accuracy is 0.648674
+Balanced accuracy is 0.646622
+Gap RMS is 0.22419050079178096
+Mean absolute gap is 0.22313785372244727
+Max gap is 0.24483759753220835
+Average odds difference is 0.223138
+Equal opportunity difference is 0.244838
+Statistical parity difference is 0.257656

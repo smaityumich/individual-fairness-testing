@@ -1,0 +1,40 @@
+SLURM_JOBID:  11570158
+SLURM_ARRAY_TASK_ID:  49
+SLURM_ARRAY_JOB_ID:  11570108
+2020-08-11 22:28:35.493698: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arcts/centos7/python3.6-anaconda/5.2.0/lib:/opt/slurm/lib64::
+2020-08-11 22:28:35.493890: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-08-11 22:28:35.493912: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gl3044.arc-ts.umich.edu): /proc/driver/nvidia/version does not exist
+2020-08-11 22:28:35.494100: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-11 22:28:35.501085: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-11 22:28:35.501174: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x556675bd68e0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-11 22:28:35.501184: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:No training configuration found in save file, so the model was *not* compiled. Compile it manually.
+(5278, 8)
+['sex', 'race', 'priors_count', 'age_cat=25 to 45', 'age_cat=Greater than 45', 'age_cat=Less than 25', 'c_charge_degree=F', 'c_charge_degree=M']
+sex
+race
+
+
+Measures for gender
+
+Accuracy is 0.647727
+Balanced accuracy is 0.645505
+Gap RMS is 0.056028802327816034
+Mean absolute gap is 0.04996871021381208
+Max gap is 0.07531342741202829
+Average odds difference is 0.025345
+Equal opportunity difference is 0.075313
+Statistical parity difference is 0.038773
+
+
+
+Measures for race
+
+Accuracy is 0.647727
+Balanced accuracy is 0.645505
+Gap RMS is 0.21614634039730315
+Mean absolute gap is 0.21001590668038533
+Max gap is 0.2611291085793324
+Average odds difference is 0.210016
+Equal opportunity difference is 0.261129
+Statistical parity difference is 0.243600
