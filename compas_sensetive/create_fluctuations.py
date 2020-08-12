@@ -40,7 +40,7 @@ if __name__ == '__main__':
     expts = ['sensr', 'reduction', 'baseline', 'project'] 
     data_index = range(1)#ends.shape[0])
     iteration = range(10)
-    lrs = [5e-3, 4e-3, 3e-3, 2e-3]
+    lrs = [5e-3, 4e-3, 3e-3, 2e-3, 6e-3, 7e-3]
 
     a = itertools.product(expts, data_index, iteration, lrs)
     b = [i for i in a]
