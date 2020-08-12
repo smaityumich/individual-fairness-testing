@@ -32,10 +32,10 @@ for i in range(10):
 
     print(f'Running data seed {data_seed} and expt seed {expt_seed}')
     init_graph = utils.ClassifierGraph([50,], 2, sensetive_directions = sensetive_directions,\
-     input_shape=(5, ), seed_model=expt_seed)
+     input_shape=(7, ), seed_model=expt_seed)
     graph = cl.Classifier(init_graph, x_train, y_train, num_steps = 8000, seed = expt_seed) # use for unfair algo
     #graph.model._set_inputs((-1, 5))
-    inputs = keras.Input((5,))
+    inputs = keras.Input((7,))
 
     outputs = graph(inputs)
     model = keras.Model(inputs, outputs)

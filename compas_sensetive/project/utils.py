@@ -11,9 +11,9 @@ class Project(keras.layers.Layer):
     
     def __init__(self, w):
         super(Project, self).__init__()
-        self.w = tf.Variable(shape = (2, 5),initial_value=w,\
+        self.w = tf.Variable(shape = (4, 7),initial_value=w,\
                                trainable=False)
-        self.input_spec = tf.keras.layers.InputSpec(shape=(None, 5))
+        self.input_spec = tf.keras.layers.InputSpec(shape=(None, 7))
 
     def call(self, x):
         return unprotected_direction(x, self.w)
@@ -24,7 +24,7 @@ class Project(keras.layers.Layer):
 
 class ClassifierGraph(keras.Model):
 
-    def __init__(self, n_hiddens, num_classes, sensetive_directions, input_shape = (5,), seed_model = 1):
+    def __init__(self, n_hiddens, num_classes, sensetive_directions, input_shape = (7,), seed_model = 1):
         super(ClassifierGraph, self).__init__()
         tf.random.set_seed(seed_model)
         self.Layers = [Project(sensetive_directions),]
