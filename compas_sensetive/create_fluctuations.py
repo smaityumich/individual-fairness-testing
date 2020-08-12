@@ -36,11 +36,11 @@ def part_fluc(args):
 
 if __name__ == '__main__':
     starts = np.array([0,])#np.arange(0, 901, 100)
-    ends = np.array([200,])#np.arange(100, 1001, 100)
+    ends = np.array([500,])#np.arange(100, 1001, 100)
     expts = ['sensr', 'reduction', 'baseline', 'project'] 
     data_index = range(1)#ends.shape[0])
     iteration = range(10)
-    lrs = [2e-2, 3e-2, 1e-2, 5e-3, 2e-3]
+    lrs = [2e-2, 3e-2, 1e-2, 5e-3, 2e-3, 5e-2, 6e-2]
 
     a = itertools.product(expts, data_index, iteration, lrs)
     b = [i for i in a]
