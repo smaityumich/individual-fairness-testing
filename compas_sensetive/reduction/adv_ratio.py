@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
     perturbed_test_samples = []
     for data in zip(x_test[start:end], y_test[start:end]):
-        perturbed_test_samples.append(sample_perturbation(data,  regularizer=50,\
+        perturbed_test_samples.append(sample_perturbation(data,  regularizer=200,\
              learning_rate=lr, num_steps=50))
 
     perturbed_test_samples = np.array(perturbed_test_samples)
