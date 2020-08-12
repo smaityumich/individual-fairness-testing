@@ -1,0 +1,582 @@
+SLURM_JOBID:  11566405
+SLURM_ARRAY_TASK_ID:  4
+SLURM_ARRAY_JOB_ID:  11566400
+WARNING:tensorflow:From /home/smaity/.local/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-08-11 20:35:39.492921: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arcts/centos7/python3.6-anaconda/5.2.0/lib:/opt/slurm/lib64::
+2020-08-11 20:35:39.492945: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-08-11 20:35:39.492964: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gl3019.arc-ts.umich.edu): /proc/driver/nvidia/version does not exist
+2020-08-11 20:35:39.493211: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-11 20:35:39.500364: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-11 20:35:39.500464: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5593ff6b70b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-11 20:35:39.500475: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+(5278, 8)
+['sex', 'race', 'priors_count', 'age_cat=25 to 45', 'age_cat=Greater than 45', 'age_cat=Less than 25', 'c_charge_degree=F', 'c_charge_degree=M']
+sex
+race
+Real and fair distances (max/min/mean):
+0.0 0.0 0.0
+0.0 0.0 0.0
+Counter success count is -1
+Epoch 0 train accuracy 0.430128; loss 0.704349; lambda is 2.000000
+Epoch 0 test accuracy 0.393939
+Train AUC is 0.424420; balanced AUC is 0.424420
+Train accuracy 0.430; balanced accuracy 0.427; FDR 0.609; TPR 0.380
+
+Train sex accuracy 0.475; balanced accuracy 0.426; FDR 0.743; TPR 0.255
+
+Train sex gap RMS 0.15161077540705345
+Train race accuracy 0.377; balanced accuracy 0.446; FDR 0.638; TPR 0.768
+
+Train race gap RMS 0.6071595855055719
+Train STD accuracy 0.049; balanced accuracy 0.010; FDR 0.053; TPR 0.256
+
+--------------------------------------------------
+Test AUC is 0.369521; balanced AUC is 0.369521
+Test accuracy 0.394; balanced accuracy 0.393; FDR 0.639; TPR 0.372
+
+Test sex accuracy 0.408; balanced accuracy 0.378; FDR 0.759; TPR 0.241
+
+Test sex gap RMS 0.14686895493416857
+Test race accuracy 0.339; balanced accuracy 0.407; FDR 0.671; TPR 0.698
+
+Test race gap RMS 0.5458741592399382
+Test STD accuracy 0.035; balanced accuracy 0.014; FDR 0.044; TPR 0.228
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+4.3976747621324535 0.026616662057304508 0.7453271293644838
+4.8421207e-06 1.996823e-06 4.1312333e-06
+Counter success count is -1
+Epoch 1000 train accuracy 0.594742; loss 0.666632; lambda is 0.000010
+Epoch 1000 test accuracy 0.583333
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.662411; subspace 0.678013; adv 0.678450
+Train AUC is 0.634697; balanced AUC is 0.634697
+Train accuracy 0.595; balanced accuracy 0.589; FDR 0.417; TPR 0.486
+
+Train sex accuracy 0.594; balanced accuracy 0.559; FDR 0.571; TPR 0.441
+
+Train sex gap RMS 0.03939989801422872
+Train race accuracy 0.620; balanced accuracy 0.577; FDR 0.476; TPR 0.375
+
+Train race gap RMS 0.16154399479776296
+Train STD accuracy 0.013; balanced accuracy 0.009; FDR 0.048; TPR 0.033
+
+--------------------------------------------------
+Test AUC is 0.619231; balanced AUC is 0.619231
+Test accuracy 0.583; balanced accuracy 0.579; FDR 0.435; TPR 0.501
+
+Test sex accuracy 0.578; balanced accuracy 0.549; FDR 0.544; TPR 0.414
+
+Test sex gap RMS 0.078985844949916
+Test race accuracy 0.624; balanced accuracy 0.581; FDR 0.489; TPR 0.401
+
+Test race gap RMS 0.18275900703842976
+Test STD accuracy 0.023; balanced accuracy 0.016; FDR 0.028; TPR 0.006
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.8160318939917244 0.004962523809472614 0.6822010475966015
+4.833045e-06 2.509292e-06 4.06451e-06
+Counter success count is -1
+Epoch 2000 train accuracy 0.620559; loss 0.657697; lambda is 0.000010
+Epoch 2000 test accuracy 0.599432
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.657463; subspace 0.668486; adv 0.669139
+Train AUC is 0.659060; balanced AUC is 0.659060
+Train accuracy 0.621; balanced accuracy 0.611; FDR 0.361; TPR 0.444
+
+Train sex accuracy 0.662; balanced accuracy 0.595; FDR 0.467; TPR 0.367
+
+Train sex gap RMS 0.0766889290779516
+Train race accuracy 0.641; balanced accuracy 0.587; FDR 0.424; TPR 0.334
+
+Train race gap RMS 0.14157719808026048
+Train STD accuracy 0.010; balanced accuracy 0.004; FDR 0.021; TPR 0.017
+
+--------------------------------------------------
+Test AUC is 0.638646; balanced AUC is 0.638646
+Test accuracy 0.599; balanced accuracy 0.590; FDR 0.395; TPR 0.431
+
+Test sex accuracy 0.605; balanced accuracy 0.552; FDR 0.509; TPR 0.310
+
+Test sex gap RMS 0.11115811238364309
+Test race accuracy 0.641; balanced accuracy 0.584; FDR 0.448; TPR 0.337
+
+Test race gap RMS 0.15169884958582813
+Test STD accuracy 0.018; balanced accuracy 0.016; FDR 0.031; TPR 0.013
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.437999080905885 0.0022197963034969173 0.6714037454327234
+4.828271e-06 2.547978e-06 3.9756133e-06
+Counter success count is -1
+Epoch 3000 train accuracy 0.621980; loss 0.651959; lambda is 0.000010
+Epoch 3000 test accuracy 0.605114
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.645131; subspace 0.654208; adv 0.655146
+Train AUC is 0.666205; balanced AUC is 0.666205
+Train accuracy 0.622; balanced accuracy 0.619; FDR 0.395; TPR 0.565
+
+Train sex accuracy 0.625; balanced accuracy 0.581; FDR 0.532; TPR 0.430
+
+Train sex gap RMS 0.12407478514119702
+Train race accuracy 0.619; balanced accuracy 0.581; FDR 0.480; TPR 0.403
+
+Train race gap RMS 0.2030489064247923
+Train STD accuracy 0.003; balanced accuracy 0.000; FDR 0.026; TPR 0.013
+
+--------------------------------------------------
+Test AUC is 0.650013; balanced AUC is 0.650013
+Test accuracy 0.605; balanced accuracy 0.601; FDR 0.410; TPR 0.527
+
+Test sex accuracy 0.587; balanced accuracy 0.554; FDR 0.533; TPR 0.402
+
+Test sex gap RMS 0.11099241047155861
+Test race accuracy 0.635; balanced accuracy 0.587; FDR 0.468; TPR 0.384
+
+Test race gap RMS 0.22490995368398042
+Test STD accuracy 0.024; balanced accuracy 0.017; FDR 0.033; TPR 0.009
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+4.229707281779783 0.004384998931863923 0.5723786109886926
+4.8327793e-06 2.5111267e-06 3.9396705e-06
+Counter success count is -1
+Epoch 4000 train accuracy 0.627428; loss 0.649127; lambda is 0.000010
+Epoch 4000 test accuracy 0.612689
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.660657; subspace 0.666358; adv 0.667567
+Train AUC is 0.666683; balanced AUC is 0.666683
+Train accuracy 0.627; balanced accuracy 0.623; FDR 0.384; TPR 0.553
+
+Train sex accuracy 0.629; balanced accuracy 0.590; FDR 0.525; TPR 0.458
+
+Train sex gap RMS 0.08264974931699387
+Train race accuracy 0.621; balanced accuracy 0.578; FDR 0.475; TPR 0.377
+
+Train race gap RMS 0.21487122820500384
+Train STD accuracy 0.004; balanced accuracy 0.006; FDR 0.025; TPR 0.041
+
+--------------------------------------------------
+Test AUC is 0.649822; balanced AUC is 0.649822
+Test accuracy 0.613; balanced accuracy 0.607; FDR 0.395; TPR 0.511
+
+Test sex accuracy 0.587; balanced accuracy 0.558; FDR 0.532; TPR 0.425
+
+Test sex gap RMS 0.07435682969733133
+Test race accuracy 0.644; balanced accuracy 0.593; FDR 0.449; TPR 0.378
+
+Test race gap RMS 0.2065224390195899
+Test STD accuracy 0.028; balanced accuracy 0.018; FDR 0.041; TPR 0.024
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.2419063146275446 0.012879954470625222 0.5786837398148634
+4.8406846e-06 2.860606e-06 3.971898e-06
+Counter success count is -1
+Epoch 5000 train accuracy 0.630981; loss 0.646976; lambda is 0.000010
+Epoch 5000 test accuracy 0.610795
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.636056; subspace 0.640862; adv 0.642215
+Train AUC is 0.670915; balanced AUC is 0.670915
+Train accuracy 0.631; balanced accuracy 0.627; FDR 0.381; TPR 0.560
+
+Train sex accuracy 0.635; balanced accuracy 0.596; FDR 0.516; TPR 0.462
+
+Train sex gap RMS 0.08771872612474618
+Train race accuracy 0.623; balanced accuracy 0.582; FDR 0.472; TPR 0.391
+
+Train race gap RMS 0.2051896775412826
+Train STD accuracy 0.006; balanced accuracy 0.007; FDR 0.022; TPR 0.035
+
+--------------------------------------------------
+Test AUC is 0.655909; balanced AUC is 0.655909
+Test accuracy 0.611; balanced accuracy 0.605; FDR 0.397; TPR 0.505
+
+Test sex accuracy 0.601; balanced accuracy 0.567; FDR 0.514; TPR 0.414
+
+Test sex gap RMS 0.07957824196180614
+Test race accuracy 0.644; balanced accuracy 0.592; FDR 0.448; TPR 0.372
+
+Test race gap RMS 0.20819399634189048
+Test STD accuracy 0.021; balanced accuracy 0.012; FDR 0.033; TPR 0.021
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.373144689615617 0.009079759159736153 0.5071041634652337
+4.844532e-06 2.8771515e-06 3.92734e-06
+Counter success count is -1
+Epoch 6000 train accuracy 0.646139; loss 0.646321; lambda is 0.000010
+Epoch 6000 test accuracy 0.61553
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.644282; subspace 0.647960; adv 0.649421
+Train AUC is 0.667683; balanced AUC is 0.667683
+Train accuracy 0.646; balanced accuracy 0.644; FDR 0.374; TPR 0.615
+
+Train sex accuracy 0.641; balanced accuracy 0.612; FDR 0.507; TPR 0.510
+
+Train sex gap RMS 0.09326279038607893
+Train race accuracy 0.638; balanced accuracy 0.604; FDR 0.451; TPR 0.445
+
+Train race gap RMS 0.2129188282187536
+Train STD accuracy 0.001; balanced accuracy 0.004; FDR 0.028; TPR 0.033
+
+--------------------------------------------------
+Test AUC is 0.654771; balanced AUC is 0.654771
+Test accuracy 0.616; balanced accuracy 0.612; FDR 0.399; TPR 0.543
+
+Test sex accuracy 0.587; balanced accuracy 0.558; FDR 0.532; TPR 0.425
+
+Test sex gap RMS 0.10167874034975238
+Test race accuracy 0.646; balanced accuracy 0.599; FDR 0.448; TPR 0.401
+
+Test race gap RMS 0.22580598636867813
+Test STD accuracy 0.029; balanced accuracy 0.021; FDR 0.042; TPR 0.012
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.98610443972231 0.005592240811317383 0.576410776741795
+4.8291313e-06 2.6452888e-06 3.960068e-06
+Counter success count is -1
+Epoch 7000 train accuracy 0.637613; loss 0.645256; lambda is 0.000010
+Epoch 7000 test accuracy 0.609848
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.634594; subspace 0.638550; adv 0.640087
+Train AUC is 0.669378; balanced AUC is 0.669378
+Train accuracy 0.638; balanced accuracy 0.635; FDR 0.379; TPR 0.590
+
+Train sex accuracy 0.639; balanced accuracy 0.607; FDR 0.510; TPR 0.500
+
+Train sex gap RMS 0.08107031204870688
+Train race accuracy 0.631; balanced accuracy 0.594; FDR 0.462; TPR 0.422
+
+Train race gap RMS 0.2088742717274701
+Train STD accuracy 0.004; balanced accuracy 0.007; FDR 0.024; TPR 0.039
+
+--------------------------------------------------
+Test AUC is 0.657885; balanced AUC is 0.657885
+Test accuracy 0.610; balanced accuracy 0.605; FDR 0.403; TPR 0.525
+
+Test sex accuracy 0.587; balanced accuracy 0.556; FDR 0.532; TPR 0.414
+
+Test sex gap RMS 0.09626556477044401
+Test race accuracy 0.648; balanced accuracy 0.600; FDR 0.443; TPR 0.395
+
+Test race gap RMS 0.21896591334365964
+Test STD accuracy 0.030; balanced accuracy 0.022; FDR 0.045; TPR 0.009
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+4.057852112318983 0.026413785551871495 0.5756763560512643
+4.8431466e-06 2.7927754e-06 3.94018e-06
+Counter success count is -1
+Epoch 8000 train accuracy 0.646376; loss 0.644692; lambda is 0.000010
+Epoch 8000 test accuracy 0.619318
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.636976; subspace 0.640379; adv 0.641959
+Train AUC is 0.672941; balanced AUC is 0.672941
+Train accuracy 0.646; balanced accuracy 0.645; FDR 0.374; TPR 0.616
+
+Train sex accuracy 0.644; balanced accuracy 0.615; FDR 0.503; TPR 0.517
+
+Train sex gap RMS 0.0894287429843386
+Train race accuracy 0.640; balanced accuracy 0.606; FDR 0.449; TPR 0.449
+
+Train race gap RMS 0.21011271289146566
+Train STD accuracy 0.002; balanced accuracy 0.004; FDR 0.027; TPR 0.034
+
+--------------------------------------------------
+Test AUC is 0.661768; balanced AUC is 0.661768
+Test accuracy 0.619; balanced accuracy 0.615; FDR 0.394; TPR 0.547
+
+Test sex accuracy 0.587; balanced accuracy 0.558; FDR 0.532; TPR 0.425
+
+Test sex gap RMS 0.10482391602141564
+Test race accuracy 0.653; balanced accuracy 0.608; FDR 0.438; TPR 0.419
+
+Test race gap RMS 0.21238101022689956
+Test STD accuracy 0.033; balanced accuracy 0.025; FDR 0.047; TPR 0.003
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.703085359445467 0.018013708005760007 0.6020364356881268
+4.841244e-06 2.9120092e-06 3.9259585e-06
+Counter success count is -1
+Epoch 9000 train accuracy 0.637849; loss 0.643504; lambda is 0.000010
+Epoch 9000 test accuracy 0.609848
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.647934; subspace 0.651538; adv 0.653181
+Train AUC is 0.675693; balanced AUC is 0.675693
+Train accuracy 0.638; balanced accuracy 0.635; FDR 0.379; TPR 0.591
+
+Train sex accuracy 0.640; balanced accuracy 0.609; FDR 0.509; TPR 0.503
+
+Train sex gap RMS 0.07935387966273227
+Train race accuracy 0.631; balanced accuracy 0.595; FDR 0.461; TPR 0.423
+
+Train race gap RMS 0.20870562962512515
+Train STD accuracy 0.004; balanced accuracy 0.007; FDR 0.024; TPR 0.040
+
+--------------------------------------------------
+Test AUC is 0.669554; balanced AUC is 0.669554
+Test accuracy 0.610; balanced accuracy 0.605; FDR 0.403; TPR 0.525
+
+Test sex accuracy 0.587; balanced accuracy 0.556; FDR 0.532; TPR 0.414
+
+Test sex gap RMS 0.09626556477044401
+Test race accuracy 0.648; balanced accuracy 0.600; FDR 0.443; TPR 0.395
+
+Test race gap RMS 0.21896591334365964
+Test STD accuracy 0.030; balanced accuracy 0.022; FDR 0.045; TPR 0.009
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+2.881669702677935 0.007551756465661359 0.6162597416470098
+4.566717e-06 2.833325e-06 3.9749852e-06
+Counter success count is -1
+Epoch 10000 train accuracy 0.639034; loss 0.642655; lambda is 0.000010
+Epoch 10000 test accuracy 0.612689
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.641580; subspace 0.645263; adv 0.646905
+Train AUC is 0.678017; balanced AUC is 0.678017
+Train accuracy 0.639; balanced accuracy 0.637; FDR 0.379; TPR 0.596
+
+Train sex accuracy 0.641; balanced accuracy 0.611; FDR 0.507; TPR 0.507
+
+Train sex gap RMS 0.08136950452584164
+Train race accuracy 0.631; balanced accuracy 0.595; FDR 0.461; TPR 0.428
+
+Train race gap RMS 0.2085679904792793
+Train STD accuracy 0.005; balanced accuracy 0.008; FDR 0.023; TPR 0.040
+
+--------------------------------------------------
+Test AUC is 0.671681; balanced AUC is 0.671681
+Test accuracy 0.613; balanced accuracy 0.608; FDR 0.400; TPR 0.533
+
+Test sex accuracy 0.587; balanced accuracy 0.556; FDR 0.532; TPR 0.414
+
+Test sex gap RMS 0.10332563554542838
+Test race accuracy 0.655; balanced accuracy 0.609; FDR 0.432; TPR 0.413
+
+Test race gap RMS 0.21458556226290648
+Test STD accuracy 0.034; balanced accuracy 0.026; FDR 0.050; TPR 0.001
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.1964644069977126 0.0019255878779158382 0.5479852923224942
+4.8161014e-06 2.8017848e-06 3.9825277e-06
+Counter success count is -1
+Epoch 11000 train accuracy 0.638797; loss 0.641458; lambda is 0.000010
+Epoch 11000 test accuracy 0.614583
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.640419; subspace 0.643647; adv 0.645336
+Train AUC is 0.680758; balanced AUC is 0.680758
+Train accuracy 0.639; balanced accuracy 0.636; FDR 0.375; TPR 0.582
+
+Train sex accuracy 0.641; balanced accuracy 0.607; FDR 0.507; TPR 0.490
+
+Train sex gap RMS 0.08244353175933844
+Train race accuracy 0.635; balanced accuracy 0.596; FDR 0.454; TPR 0.417
+
+Train race gap RMS 0.20545200512802436
+Train STD accuracy 0.003; balanced accuracy 0.005; FDR 0.027; TPR 0.036
+
+--------------------------------------------------
+Test AUC is 0.674208; balanced AUC is 0.674208
+Test accuracy 0.615; balanced accuracy 0.610; FDR 0.396; TPR 0.525
+
+Test sex accuracy 0.592; balanced accuracy 0.560; FDR 0.526; TPR 0.414
+
+Test sex gap RMS 0.09608375335743106
+Test race accuracy 0.650; balanced accuracy 0.601; FDR 0.437; TPR 0.390
+
+Test race gap RMS 0.22123256587755782
+Test STD accuracy 0.029; balanced accuracy 0.021; FDR 0.045; TPR 0.012
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+2.7583526994980803 0.010217367085471578 0.4890060448940212
+4.8408147e-06 3.8593058e-07 3.98819e-06
+Counter success count is -1
+Epoch 12000 train accuracy 0.639270; loss 0.640948; lambda is 0.000010
+Epoch 12000 test accuracy 0.616477
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.635336; subspace 0.638341; adv 0.640023
+Train AUC is 0.683502; balanced AUC is 0.683502
+Train accuracy 0.639; balanced accuracy 0.636; FDR 0.375; TPR 0.582
+
+Train sex accuracy 0.644; balanced accuracy 0.609; FDR 0.504; TPR 0.490
+
+Train sex gap RMS 0.08352714776000503
+Train race accuracy 0.635; balanced accuracy 0.597; FDR 0.452; TPR 0.415
+
+Train race gap RMS 0.20757354641915193
+Train STD accuracy 0.004; balanced accuracy 0.006; FDR 0.026; TPR 0.037
+
+--------------------------------------------------
+Test AUC is 0.676350; balanced AUC is 0.676350
+Test accuracy 0.616; balanced accuracy 0.612; FDR 0.394; TPR 0.527
+
+Test sex accuracy 0.596; balanced accuracy 0.564; FDR 0.520; TPR 0.414
+
+Test sex gap RMS 0.0985182963301618
+Test race accuracy 0.653; balanced accuracy 0.603; FDR 0.432; TPR 0.390
+
+Test race gap RMS 0.22458610937874954
+Test STD accuracy 0.028; balanced accuracy 0.020; FDR 0.044; TPR 0.012
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.2350698955243122 0.015630116019046247 0.5280619118369911
+4.8452007e-06 3.0100816e-07 3.9102983e-06
+Counter success count is -1
+Epoch 13000 train accuracy 0.639270; loss 0.639924; lambda is 0.000010
+Epoch 13000 test accuracy 0.616477
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.633818; subspace 0.637046; adv 0.638753
+Train AUC is 0.686255; balanced AUC is 0.686255
+Train accuracy 0.639; balanced accuracy 0.636; FDR 0.375; TPR 0.582
+
+Train sex accuracy 0.644; balanced accuracy 0.609; FDR 0.504; TPR 0.490
+
+Train sex gap RMS 0.08352714776000503
+Train race accuracy 0.635; balanced accuracy 0.597; FDR 0.452; TPR 0.415
+
+Train race gap RMS 0.20757354641915193
+Train STD accuracy 0.004; balanced accuracy 0.006; FDR 0.026; TPR 0.037
+
+--------------------------------------------------
+Test AUC is 0.677386; balanced AUC is 0.677386
+Test accuracy 0.616; balanced accuracy 0.612; FDR 0.394; TPR 0.527
+
+Test sex accuracy 0.596; balanced accuracy 0.564; FDR 0.520; TPR 0.414
+
+Test sex gap RMS 0.0985182963301618
+Test race accuracy 0.653; balanced accuracy 0.603; FDR 0.432; TPR 0.390
+
+Test race gap RMS 0.22458610937874954
+Test STD accuracy 0.028; balanced accuracy 0.020; FDR 0.044; TPR 0.012
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.233449082793542 0.007274809069156547 0.5435475548534332
+4.84885e-06 2.5136706e-06 3.959874e-06
+Counter success count is -1
+Epoch 14000 train accuracy 0.638323; loss 0.639284; lambda is 0.000010
+Epoch 14000 test accuracy 0.61553
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.635373; subspace 0.637996; adv 0.639819
+Train AUC is 0.687465; balanced AUC is 0.687465
+Train accuracy 0.638; balanced accuracy 0.635; FDR 0.376; TPR 0.583
+
+Train sex accuracy 0.645; balanced accuracy 0.610; FDR 0.502; TPR 0.493
+
+Train sex gap RMS 0.0832936303364017
+Train race accuracy 0.635; balanced accuracy 0.597; FDR 0.453; TPR 0.417
+
+Train race gap RMS 0.20904152812577573
+Train STD accuracy 0.005; balanced accuracy 0.007; FDR 0.025; TPR 0.038
+
+--------------------------------------------------
+Test AUC is 0.678876; balanced AUC is 0.678876
+Test accuracy 0.616; balanced accuracy 0.611; FDR 0.395; TPR 0.527
+
+Test sex accuracy 0.596; balanced accuracy 0.564; FDR 0.520; TPR 0.414
+
+Test sex gap RMS 0.09880714723360778
+Test race accuracy 0.653; balanced accuracy 0.603; FDR 0.432; TPR 0.390
+
+Test race gap RMS 0.22647012962026322
+Test STD accuracy 0.028; balanced accuracy 0.020; FDR 0.044; TPR 0.012
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+2.941820622147441 0.00615966782305377 0.5402186212567773
+4.8498073e-06 2.0914135e-06 3.915272e-06
+Counter success count is -1
+Epoch 15000 train accuracy 0.638323; loss 0.638919; lambda is 0.000010
+Epoch 15000 test accuracy 0.61553
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.624325; subspace 0.627640; adv 0.629330
+Train AUC is 0.688256; balanced AUC is 0.688256
+Train accuracy 0.638; balanced accuracy 0.635; FDR 0.376; TPR 0.583
+
+Train sex accuracy 0.645; balanced accuracy 0.610; FDR 0.502; TPR 0.493
+
+Train sex gap RMS 0.0832936303364017
+Train race accuracy 0.635; balanced accuracy 0.597; FDR 0.453; TPR 0.417
+
+Train race gap RMS 0.20904152812577573
+Train STD accuracy 0.005; balanced accuracy 0.007; FDR 0.025; TPR 0.038
+
+--------------------------------------------------
+Test AUC is 0.679769; balanced AUC is 0.679769
+Test accuracy 0.616; balanced accuracy 0.611; FDR 0.395; TPR 0.527
+
+Test sex accuracy 0.596; balanced accuracy 0.564; FDR 0.520; TPR 0.414
+
+Test sex gap RMS 0.09880714723360778
+Test race accuracy 0.653; balanced accuracy 0.603; FDR 0.432; TPR 0.390
+
+Test race gap RMS 0.22647012962026322
+Test STD accuracy 0.028; balanced accuracy 0.020; FDR 0.044; TPR 0.012
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3.1000267457046036 0.011256828308280866 0.5149264962504917
+4.8498073e-06 2.0914135e-06 3.915272e-06
+Counter success count is -1
+Epoch 15999 train accuracy 0.637613; loss 0.638468; lambda is 0.000010
+Epoch 15999 test accuracy 0.612689
+FAILED attacks: subspace 0; full 0; Nans after attack 0
+Loss clean 0.637106; subspace 0.640176; adv 0.641941
+Train AUC is 0.688863; balanced AUC is 0.688863
+Train accuracy 0.638; balanced accuracy 0.634; FDR 0.377; TPR 0.581
+
+Train sex accuracy 0.642; balanced accuracy 0.607; FDR 0.505; TPR 0.486
+
+Train sex gap RMS 0.08681066999232992
+Train race accuracy 0.634; balanced accuracy 0.595; FDR 0.454; TPR 0.412
+
+Train race gap RMS 0.2117150119370754
+Train STD accuracy 0.004; balanced accuracy 0.006; FDR 0.026; TPR 0.037
+
+--------------------------------------------------
+Test AUC is 0.681724; balanced AUC is 0.681724
+Test accuracy 0.613; balanced accuracy 0.608; FDR 0.398; TPR 0.521
+
+Test sex accuracy 0.596; balanced accuracy 0.564; FDR 0.520; TPR 0.414
+
+Test sex gap RMS 0.09372333239884938
+Test race accuracy 0.646; balanced accuracy 0.594; FDR 0.443; TPR 0.372
+
+Test race gap RMS 0.234758880661361
+Test STD accuracy 0.025; balanced accuracy 0.015; FDR 0.038; TPR 0.021
+
+--------------------------------------------------
+
+Final train accuracy 0.637613
+Final test accuracy 0.612689
+Final lambda 0.000010
+Gender:
+Accuracy is 0.612689
+Balanced accuracy is 0.607612
+Gap RMS is 0.09372333239884938
+Mean absolute gap is 0.077700683641207
+Max gap is 0.13010933557611443
+Average odds difference is 0.077701
+Equal opportunity difference is 0.130109
+Statistical parity difference is 0.089848
+
+Race:
+Accuracy is 0.612689
+Balanced accuracy is 0.607612
+Gap RMS is 0.234758880661361
+Mean absolute gap is 0.23466168408604954
+Max gap is 0.24141639142791305
+Average odds difference is 0.234662
+Equal opportunity difference is 0.227907
+Statistical parity difference is 0.262821

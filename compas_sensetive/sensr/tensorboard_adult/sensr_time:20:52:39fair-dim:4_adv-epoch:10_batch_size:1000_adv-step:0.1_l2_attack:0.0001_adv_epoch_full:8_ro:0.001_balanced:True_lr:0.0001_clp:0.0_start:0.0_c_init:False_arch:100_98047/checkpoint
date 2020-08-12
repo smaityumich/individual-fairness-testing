@@ -1,0 +1,4 @@
+model_checkpoint_path: "fair_model-303982"
+all_model_checkpoint_paths: "fair_model-1"
+all_model_checkpoint_paths: "fair_model-190001"
+all_model_checkpoint_paths: "fair_model-303982"
