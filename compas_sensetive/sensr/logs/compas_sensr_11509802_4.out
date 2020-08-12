@@ -1,0 +1,1215 @@
+SLURM_JOBID:  11509808
+SLURM_ARRAY_TASK_ID:  4
+SLURM_ARRAY_JOB_ID:  11509802
+WARNING:tensorflow:From /home/smaity/.local/lib/python3.6/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2020-08-10 16:41:10.286003: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /sw/arcts/centos7/python3.6-anaconda/5.2.0/lib:/opt/slurm/lib64::
+2020-08-10 16:41:10.286042: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2020-08-10 16:41:10.286068: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (gl3382.arc-ts.umich.edu): /proc/driver/nvidia/version does not exist
+2020-08-10 16:41:10.286367: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-10 16:41:10.292259: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-10 16:41:10.292383: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x563da2942c20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-10 16:41:10.292394: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+(5278, 8)
+['sex', 'race', 'priors_count', 'age_cat=25 to 45', 'age_cat=Greater than 45', 'age_cat=Less than 25', 'c_charge_degree=F', 'c_charge_degree=M']
+sex
+race
+Real and fair distances (max/min/mean):
+0.0 0.0 0.0
+0.0 0.0 0.0
+Counter success count is -1
+Epoch 0 train accuracy 0.523212; loss 0.713210; lambda is 2.000000
+Epoch 0 test accuracy 0.470644
+Train AUC is 0.415883; balanced AUC is 0.415883
+Train accuracy 0.523; balanced accuracy 0.511; FDR 0.511; TPR 0.305
+
+Train sex accuracy 0.582; balanced accuracy 0.511; FDR 0.626; TPR 0.269
+
+Train sex gap RMS 0.04391899344601157
+Train race accuracy 0.565; balanced accuracy 0.525; FDR 0.568; TPR 0.338
+
+Train race gap RMS 0.03617993844719925
+Train STD accuracy 0.008; balanced accuracy 0.007; FDR 0.029; TPR 0.035
+
+--------------------------------------------------
+Test AUC is 0.392880; balanced AUC is 0.392880
+Test accuracy 0.471; balanced accuracy 0.461; FDR 0.589; TPR 0.290
+
+Test sex accuracy 0.520; balanced accuracy 0.466; FDR 0.672; TPR 0.218
+
+Test sex gap RMS 0.09785566887064957
+Test race accuracy 0.492; balanced accuracy 0.457; FDR 0.673; TPR 0.308
+
+Test race gap RMS 0.040280712164338595
+Test STD accuracy 0.014; balanced accuracy 0.004; FDR 0.000; TPR 0.045
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.708209 to 0.704830; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698074 to 0.697458; resetting the attack
+Real and fair distances (max/min/mean):
+3907.642834798389 72.3103707017721 1960.8339561246676
+0.000112108726 5.8132853e-05 0.000107639855
+Counter success count is -1
+Epoch 1000 train accuracy 0.508290; loss 0.701585; lambda is 0.000010
+Epoch 1000 test accuracy 0.486742
+FAILED attacks: subspace 2; full 0; Nans after attack 0
+Loss clean 0.697668; subspace 0.705249; adv 0.706215
+Train AUC is 0.494382; balanced AUC is 0.494382
+Train accuracy 0.508; balanced accuracy 0.505; FDR 0.524; TPR 0.441
+
+Train sex accuracy 0.484; balanced accuracy 0.469; FDR 0.677; TPR 0.420
+
+Train sex gap RMS 0.04864748827773827
+Train race accuracy 0.492; balanced accuracy 0.481; FDR 0.627; TPR 0.428
+
+Train race gap RMS 0.0463780943367467
+Train STD accuracy 0.004; balanced accuracy 0.006; FDR 0.025; TPR 0.004
+
+--------------------------------------------------
+Test AUC is 0.481947; balanced AUC is 0.481947
+Test accuracy 0.487; balanced accuracy 0.483; FDR 0.549; TPR 0.414
+
+Test sex accuracy 0.422; balanced accuracy 0.399; FDR 0.723; TPR 0.299
+
+Test sex gap RMS 0.10997319820210091
+Test race accuracy 0.488; balanced accuracy 0.471; FDR 0.648; TPR 0.401
+
+Test race gap RMS 0.019588068543727546
+Test STD accuracy 0.033; balanced accuracy 0.036; FDR 0.038; TPR 0.051
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.705119 to 0.704815; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699964 to 0.699838; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.706416 to 0.706083; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.706061 to 0.703662; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703286 to 0.702741; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.704287 to 0.700429; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703215 to 0.702045; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703618 to 0.699129; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703978 to 0.698293; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702764 to 0.702702; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.704839 to 0.696880; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697764 to 0.695777; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702097 to 0.696694; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700288 to 0.695969; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696297 to 0.695005; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701835 to 0.698007; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697145 to 0.695038; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699814 to 0.697683; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701195 to 0.700544; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698087 to 0.696475; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700853 to 0.698501; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701392 to 0.698848; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698482 to 0.693842; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702446 to 0.697812; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703980 to 0.695543; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702972 to 0.698112; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697974 to 0.694417; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693047 to 0.690173; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699402 to 0.699132; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697798 to 0.697218; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699622 to 0.698423; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698845 to 0.694057; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703726 to 0.696031; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703324 to 0.699107; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694012 to 0.691015; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697908 to 0.697368; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.705414 to 0.705151; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.704036 to 0.703002; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701145 to 0.698944; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692150 to 0.691987; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694506 to 0.692786; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695761 to 0.692043; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701785 to 0.700533; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702092 to 0.700030; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694937 to 0.694662; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.704043 to 0.698215; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700050 to 0.698620; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699740 to 0.694271; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695318 to 0.692770; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702156 to 0.699253; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697038 to 0.687596; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693427 to 0.692667; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695638 to 0.695566; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697100 to 0.692213; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.704011 to 0.703621; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698744 to 0.696690; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701721 to 0.698813; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693390 to 0.691313; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700409 to 0.699627; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693438 to 0.689342; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699690 to 0.693239; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691915 to 0.688807; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701385 to 0.698334; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696887 to 0.691735; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698625 to 0.692904; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694352 to 0.691856; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.703337 to 0.699533; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701677 to 0.700762; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692900 to 0.691832; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695471 to 0.689089; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696040 to 0.689525; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700622 to 0.693529; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696854 to 0.694193; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698016 to 0.695686; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689909 to 0.689305; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689491 to 0.686282; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690453 to 0.684665; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699562 to 0.694822; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692257 to 0.689250; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701266 to 0.696543; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695793 to 0.692568; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695959 to 0.692026; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691599 to 0.685833; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695231 to 0.693907; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694257 to 0.693512; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695760 to 0.692148; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691830 to 0.691088; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697307 to 0.694675; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693941 to 0.692618; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695992 to 0.694800; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700231 to 0.695231; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694016 to 0.692303; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690013 to 0.689575; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691810 to 0.690895; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700636 to 0.694106; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698700 to 0.690303; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700157 to 0.692213; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693715 to 0.688885; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695102 to 0.692536; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700573 to 0.695202; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701414 to 0.697409; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698801 to 0.693019; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692820 to 0.689376; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695515 to 0.688431; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.702650 to 0.696625; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691668 to 0.685379; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700061 to 0.698348; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696815 to 0.690380; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695784 to 0.690065; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693550 to 0.690804; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696404 to 0.695416; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689258 to 0.688146; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693053 to 0.689654; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693028 to 0.689904; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695692 to 0.693198; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699637 to 0.695732; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689306 to 0.687784; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.704451 to 0.694303; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693580 to 0.687646; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693502 to 0.688561; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.701256 to 0.694636; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687014 to 0.686768; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691812 to 0.685833; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696937 to 0.695471; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695971 to 0.693356; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699896 to 0.691904; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691333 to 0.688004; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686926 to 0.683435; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690485 to 0.687042; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697348 to 0.691436; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693638 to 0.690055; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691588 to 0.689171; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698135 to 0.695589; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692737 to 0.691640; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691583 to 0.690637; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693000 to 0.690848; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690221 to 0.689952; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688296 to 0.688267; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692637 to 0.692085; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694107 to 0.693467; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700010 to 0.689112; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686476 to 0.683168; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689832 to 0.687338; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690364 to 0.687321; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685939 to 0.683074; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694162 to 0.689677; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690149 to 0.689639; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696448 to 0.695359; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693711 to 0.692378; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691692 to 0.691592; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693574 to 0.693255; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697632 to 0.694527; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691831 to 0.688930; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695065 to 0.692171; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694644 to 0.693201; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697850 to 0.694255; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693958 to 0.686314; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694469 to 0.694174; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693026 to 0.688133; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693541 to 0.687186; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693994 to 0.689217; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690014 to 0.684143; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699718 to 0.695902; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694136 to 0.688922; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692684 to 0.688707; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684757 to 0.678011; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689216 to 0.686757; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700262 to 0.693688; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697244 to 0.696318; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700816 to 0.700325; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690991 to 0.688917; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697361 to 0.692502; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684340 to 0.678472; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694681 to 0.689030; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696300 to 0.692391; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687772 to 0.686193; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692255 to 0.687198; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694303 to 0.686238; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693508 to 0.688283; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691382 to 0.691054; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696202 to 0.693705; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690319 to 0.686257; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696284 to 0.690017; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695521 to 0.694926; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693251 to 0.691006; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689406 to 0.681666; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692680 to 0.690293; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694256 to 0.693542; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695587 to 0.690948; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696665 to 0.691121; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696861 to 0.687117; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692170 to 0.687461; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687043 to 0.678198; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692023 to 0.689366; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687694 to 0.686012; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.699471 to 0.695750; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695905 to 0.687984; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689709 to 0.684278; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694458 to 0.689299; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693667 to 0.687055; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686242 to 0.685168; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692659 to 0.690016; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694593 to 0.690197; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690927 to 0.681029; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692747 to 0.688288; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692029 to 0.683443; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696413 to 0.687734; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694834 to 0.694438; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.700086 to 0.698340; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697434 to 0.694420; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693937 to 0.689341; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692831 to 0.688771; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690671 to 0.687552; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697133 to 0.687757; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695519 to 0.692582; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697168 to 0.697137; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687805 to 0.682506; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692517 to 0.689726; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687383 to 0.686834; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694844 to 0.693909; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690516 to 0.689909; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694945 to 0.693155; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696497 to 0.691079; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.696451 to 0.692806; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694378 to 0.689082; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691144 to 0.679008; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693011 to 0.686620; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695546 to 0.689203; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694196 to 0.686288; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693471 to 0.692096; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689730 to 0.683411; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693110 to 0.687619; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690691 to 0.686745; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692358 to 0.692298; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686279 to 0.684149; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693676 to 0.691129; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693472 to 0.693273; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694482 to 0.693313; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689604 to 0.688367; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690272 to 0.685705; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688515 to 0.687487; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692623 to 0.689738; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689143 to 0.687737; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687480 to 0.683441; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697748 to 0.686771; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692588 to 0.688551; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685525 to 0.684175; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690131 to 0.688554; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688656 to 0.685901; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692770 to 0.678487; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691866 to 0.682592; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692959 to 0.690984; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690039 to 0.686096; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691763 to 0.687020; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690478 to 0.687648; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689583 to 0.687958; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689233 to 0.687586; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683736 to 0.679210; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687966 to 0.687685; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684709 to 0.682124; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686861 to 0.684965; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681075 to 0.677167; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684566 to 0.681473; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694333 to 0.683588; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693629 to 0.682284; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691847 to 0.687130; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689067 to 0.683665; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.697075 to 0.686376; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691366 to 0.682581; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695126 to 0.683342; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692951 to 0.686580; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693502 to 0.685310; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691203 to 0.689006; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690296 to 0.688791; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691959 to 0.686764; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689816 to 0.689623; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.698665 to 0.688547; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694342 to 0.689061; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690205 to 0.681212; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686935 to 0.686444; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686332 to 0.683850; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688391 to 0.688231; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684387 to 0.679470; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690135 to 0.685796; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686189 to 0.677160; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.692282 to 0.684115; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684829 to 0.675784; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690618 to 0.684504; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689449 to 0.686894; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687031 to 0.682476; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688207 to 0.675224; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687147 to 0.678519; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687563 to 0.680480; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689798 to 0.674288; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690769 to 0.684222; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688015 to 0.686392; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687684 to 0.683970; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686975 to 0.680401; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689722 to 0.687502; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687443 to 0.685245; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689354 to 0.681296; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687579 to 0.679486; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683907 to 0.677977; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684861 to 0.679403; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685560 to 0.682473; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687914 to 0.684434; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687855 to 0.683736; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685176 to 0.679401; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688464 to 0.682306; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690212 to 0.686007; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686209 to 0.682378; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683384 to 0.674487; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686740 to 0.681834; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685477 to 0.678508; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684980 to 0.675770; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685899 to 0.675936; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690654 to 0.688948; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689344 to 0.683772; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686799 to 0.683156; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683480 to 0.680894; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687685 to 0.687679; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684539 to 0.677287; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685482 to 0.681617; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690617 to 0.686748; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687212 to 0.681141; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689485 to 0.681947; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681215 to 0.676650; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685746 to 0.681825; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683003 to 0.678911; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683744 to 0.683331; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688110 to 0.685590; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689551 to 0.682256; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682672 to 0.677197; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688413 to 0.685405; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690627 to 0.684198; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682748 to 0.679501; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684023 to 0.683870; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683875 to 0.680663; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690750 to 0.690507; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682537 to 0.682368; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686315 to 0.680625; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682469 to 0.680791; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688548 to 0.684488; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684784 to 0.683085; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684291 to 0.681656; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687973 to 0.683195; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.694770 to 0.681914; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683780 to 0.678387; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685040 to 0.683263; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684046 to 0.683955; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693324 to 0.693247; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682107 to 0.676415; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689168 to 0.685009; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685005 to 0.682373; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683885 to 0.683546; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682045 to 0.673902; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683535 to 0.676400; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681851 to 0.681809; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689414 to 0.681903; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683009 to 0.680156; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691379 to 0.683816; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682224 to 0.676968; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684271 to 0.683960; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690437 to 0.685156; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684404 to 0.679715; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684837 to 0.681575; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687313 to 0.682827; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681758 to 0.680870; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686272 to 0.683579; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683589 to 0.674397; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685025 to 0.677868; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689438 to 0.687998; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691720 to 0.690328; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685120 to 0.681817; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687429 to 0.682031; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684985 to 0.677220; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681706 to 0.676332; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684410 to 0.684152; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686908 to 0.678969; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685554 to 0.682873; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682546 to 0.681420; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683406 to 0.674411; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687765 to 0.683536; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684387 to 0.681198; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684980 to 0.681919; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686543 to 0.679144; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687500 to 0.680397; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689553 to 0.686921; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686041 to 0.685235; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687143 to 0.682418; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691722 to 0.690857; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688805 to 0.687191; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691525 to 0.689664; resetting the attack
+Real and fair distances (max/min/mean):
+5999.564966295354 41.88072508111936 1939.221928851029
+0.00011215499 5.5902092e-05 9.9020275e-05
+Counter success count is -1
+Epoch 2000 train accuracy 0.524633; loss 0.687177; lambda is 0.000010
+Epoch 2000 test accuracy 0.510417
+FAILED attacks: subspace 395; full 0; Nans after attack 0
+Loss clean 0.683967; subspace 0.690416; adv 0.691384
+Train AUC is 0.550371; balanced AUC is 0.550371
+Train accuracy 0.525; balanced accuracy 0.523; FDR 0.505; TPR 0.502
+
+Train sex accuracy 0.495; balanced accuracy 0.490; FDR 0.656; TPR 0.472
+
+Train sex gap RMS 0.04221696687569288
+Train race accuracy 0.499; balanced accuracy 0.493; FDR 0.614; TPR 0.465
+
+Train race gap RMS 0.04978736350110616
+Train STD accuracy 0.002; balanced accuracy 0.001; FDR 0.021; TPR 0.004
+
+--------------------------------------------------
+Test AUC is 0.530424; balanced AUC is 0.530424
+Test accuracy 0.510; balanced accuracy 0.510; FDR 0.519; TPR 0.503
+
+Test sex accuracy 0.439; balanced accuracy 0.433; FDR 0.676; TPR 0.402
+
+Test sex gap RMS 0.09988370928193616
+Test race accuracy 0.494; balanced accuracy 0.489; FDR 0.628; TPR 0.465
+
+Test race gap RMS 0.04143734354113527
+Test STD accuracy 0.027; balanced accuracy 0.028; FDR 0.024; TPR 0.031
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.691048 to 0.690679; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684965 to 0.682170; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688009 to 0.679444; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687582 to 0.685986; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687595 to 0.686448; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681735 to 0.680718; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689414 to 0.683218; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686029 to 0.684553; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691704 to 0.688986; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685401 to 0.683307; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687391 to 0.687272; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686181 to 0.683633; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686281 to 0.684173; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691777 to 0.671886; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687699 to 0.674379; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686773 to 0.683879; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688253 to 0.683966; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685823 to 0.680974; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684444 to 0.684382; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685434 to 0.680208; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688034 to 0.671640; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687506 to 0.673724; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680322 to 0.675426; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684572 to 0.676147; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684216 to 0.676428; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686197 to 0.674615; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685928 to 0.672439; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686119 to 0.678124; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680736 to 0.674151; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684646 to 0.682134; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685453 to 0.681205; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681775 to 0.675944; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682745 to 0.675839; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688474 to 0.678527; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684191 to 0.682068; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686236 to 0.684386; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684239 to 0.682723; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684795 to 0.681237; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688368 to 0.680989; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686975 to 0.680408; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687100 to 0.679809; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683811 to 0.675519; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684964 to 0.679395; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685934 to 0.677920; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687537 to 0.681245; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683133 to 0.679750; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687503 to 0.684659; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685680 to 0.683590; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687620 to 0.683521; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687154 to 0.682909; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687876 to 0.685387; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684017 to 0.678928; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687733 to 0.684243; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689229 to 0.686251; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687068 to 0.683865; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683064 to 0.681967; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685165 to 0.682704; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683780 to 0.683424; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681826 to 0.680631; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687755 to 0.686761; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684202 to 0.681895; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688604 to 0.678295; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683059 to 0.676701; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685327 to 0.676396; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684271 to 0.679861; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684079 to 0.680224; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685741 to 0.683599; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682402 to 0.682005; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687265 to 0.686853; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687582 to 0.686985; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689158 to 0.685226; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690128 to 0.687861; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683188 to 0.678169; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689774 to 0.678901; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688300 to 0.686258; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684157 to 0.683071; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686180 to 0.685453; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687764 to 0.684325; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684926 to 0.681631; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685534 to 0.678543; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685506 to 0.676570; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683550 to 0.676219; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686560 to 0.679029; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686058 to 0.676728; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686628 to 0.668782; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687436 to 0.670036; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687712 to 0.680311; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685814 to 0.685066; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689067 to 0.681879; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685622 to 0.678428; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683529 to 0.676525; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685663 to 0.679612; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687427 to 0.686451; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686304 to 0.676890; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684961 to 0.666464; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684612 to 0.671217; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683182 to 0.669065; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686843 to 0.673642; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683849 to 0.679892; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686791 to 0.678931; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683760 to 0.680185; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683640 to 0.676647; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682813 to 0.678030; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683914 to 0.675491; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685008 to 0.680704; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682601 to 0.679737; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689067 to 0.686838; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689162 to 0.689150; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688407 to 0.687327; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684430 to 0.681403; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685759 to 0.681266; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684478 to 0.684458; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683639 to 0.678926; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683464 to 0.680615; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688034 to 0.680305; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681905 to 0.681225; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685598 to 0.680655; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683736 to 0.682113; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686837 to 0.686195; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685624 to 0.680562; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.678425 to 0.677661; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684595 to 0.678295; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681944 to 0.679162; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683933 to 0.672525; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681136 to 0.676990; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683616 to 0.672167; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683111 to 0.677193; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683583 to 0.680546; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.677430 to 0.674037; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683319 to 0.678639; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684629 to 0.671973; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682436 to 0.681922; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685689 to 0.681735; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.679988 to 0.671030; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680754 to 0.673542; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681324 to 0.680756; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685059 to 0.675871; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682394 to 0.681226; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682655 to 0.681614; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686261 to 0.683561; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683034 to 0.680217; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681158 to 0.677868; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683550 to 0.683041; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684577 to 0.676359; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682782 to 0.679540; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682989 to 0.675237; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680339 to 0.674727; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681059 to 0.678251; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684444 to 0.683251; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685973 to 0.682079; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685119 to 0.669642; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680474 to 0.669217; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682568 to 0.676488; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683745 to 0.680198; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685097 to 0.677845; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686069 to 0.681366; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684649 to 0.678753; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681337 to 0.672006; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683621 to 0.676768; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685265 to 0.682604; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683206 to 0.674749; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680402 to 0.677844; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683737 to 0.681026; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680767 to 0.680558; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684433 to 0.676381; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680620 to 0.675182; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685081 to 0.673190; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685378 to 0.684430; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.677317 to 0.671950; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686511 to 0.678875; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683969 to 0.682242; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682824 to 0.679801; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681530 to 0.680223; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681582 to 0.677880; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683617 to 0.680147; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682625 to 0.675167; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.680006 to 0.674523; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682157 to 0.681870; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683746 to 0.680865; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.682523 to 0.680506; resetting the attack
+Real and fair distances (max/min/mean):
+5973.957889647594 11.600934927894075 2063.4569199204693
+0.00011190288 5.7955185e-05 0.00010341236
+Counter success count is -1
+Epoch 3000 train accuracy 0.655140; loss 0.682720; lambda is 0.000010
+Epoch 3000 test accuracy 0.639205
+FAILED attacks: subspace 575; full 0; Nans after attack 0
+Loss clean 0.681693; subspace 0.692001; adv 0.692875
+Train AUC is 0.678346; balanced AUC is 0.678346
+Train accuracy 0.655; balanced accuracy 0.657; FDR 0.381; TPR 0.694
+
+Train sex accuracy 0.649; balanced accuracy 0.645; FDR 0.497; TPR 0.633
+
+Train sex gap RMS 0.06108813408893989
+Train race accuracy 0.642; balanced accuracy 0.622; FDR 0.454; TPR 0.531
+
+Train race gap RMS 0.20993352625416445
+Train STD accuracy 0.003; balanced accuracy 0.011; FDR 0.022; TPR 0.051
+
+--------------------------------------------------
+Test AUC is 0.658146; balanced AUC is 0.658146
+Test accuracy 0.639; balanced accuracy 0.640; FDR 0.390; TPR 0.648
+
+Test sex accuracy 0.628; balanced accuracy 0.620; FDR 0.480; TPR 0.586
+
+Test sex gap RMS 0.057045362750162955
+Test race accuracy 0.648; balanced accuracy 0.621; FDR 0.456; TPR 0.506
+
+Test race gap RMS 0.21272754789454779
+Test STD accuracy 0.010; balanced accuracy 0.000; FDR 0.012; TPR 0.040
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.682640 to 0.681758; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.681665 to 0.680789; resetting the attack
+Real and fair distances (max/min/mean):
+4818.062841304525 11.084779549498336 2209.212108337865
+0.000111850415 5.979401e-05 0.00010419849
+Counter success count is -1
+Epoch 4000 train accuracy 0.576504; loss 0.682176; lambda is 0.000010
+Epoch 4000 test accuracy 0.54072
+FAILED attacks: subspace 577; full 0; Nans after attack 0
+Loss clean 0.681607; subspace 0.702118; adv 0.702874
+Train AUC is 0.626616; balanced AUC is 0.626616
+Train accuracy 0.577; balanced accuracy 0.583; FDR 0.461; TPR 0.695
+
+Train sex accuracy 0.577; balanced accuracy 0.606; FDR 0.561; TPR 0.706
+
+Train sex gap RMS 0.03336120826608981
+Train race accuracy 0.583; balanced accuracy 0.588; FDR 0.523; TPR 0.611
+
+Train race gap RMS 0.150702480928287
+Train STD accuracy 0.003; balanced accuracy 0.009; FDR 0.019; TPR 0.048
+
+--------------------------------------------------
+Test AUC is 0.593450; balanced AUC is 0.593450
+Test accuracy 0.541; balanced accuracy 0.551; FDR 0.492; TPR 0.732
+
+Test sex accuracy 0.547; balanced accuracy 0.585; FDR 0.548; TPR 0.759
+
+Test sex gap RMS 0.04479239020999715
+Test race accuracy 0.519; balanced accuracy 0.551; FDR 0.579; TPR 0.686
+
+Test race gap RMS 0.08040674312598768
+Test STD accuracy 0.014; balanced accuracy 0.017; FDR 0.015; TPR 0.036
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+4925.353280331836 31.06496765153873 2246.954507098949
+0.000111831876 4.9692113e-05 0.00010444659
+Counter success count is -1
+Epoch 5000 train accuracy 0.543581; loss 0.684075; lambda is 0.000010
+Epoch 5000 test accuracy 0.546402
+FAILED attacks: subspace 577; full 0; Nans after attack 0
+Loss clean 0.681539; subspace 0.692112; adv 0.692831
+Train AUC is 0.595754; balanced AUC is 0.595754
+Train accuracy 0.544; balanced accuracy 0.557; FDR 0.490; TPR 0.777
+
+Train sex accuracy 0.520; balanced accuracy 0.576; FDR 0.594; TPR 0.769
+
+Train sex gap RMS 0.04413273789205875
+Train race accuracy 0.527; balanced accuracy 0.561; FDR 0.562; TPR 0.723
+
+Train race gap RMS 0.09956869294882587
+Train STD accuracy 0.003; balanced accuracy 0.007; FDR 0.016; TPR 0.023
+
+--------------------------------------------------
+Test AUC is 0.568315; balanced AUC is 0.568315
+Test accuracy 0.546; balanced accuracy 0.558; FDR 0.488; TPR 0.761
+
+Test sex accuracy 0.556; balanced accuracy 0.599; FDR 0.540; TPR 0.793
+
+Test sex gap RMS 0.0531513830725676
+Test race accuracy 0.526; balanced accuracy 0.563; FDR 0.571; TPR 0.721
+
+Test race gap RMS 0.0801720515056012
+Test STD accuracy 0.015; balanced accuracy 0.018; FDR 0.015; TPR 0.036
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.686356 to 0.683308; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689900 to 0.688291; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688315 to 0.687486; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693357 to 0.692080; resetting the attack
+Real and fair distances (max/min/mean):
+4841.6292407085775 15.033993228873697 2208.76094647474
+0.00011188642 2.2527469e-05 0.00010200479
+Counter success count is -1
+Epoch 6000 train accuracy 0.542397; loss 0.683936; lambda is 0.000010
+Epoch 6000 test accuracy 0.545455
+FAILED attacks: subspace 581; full 0; Nans after attack 0
+Loss clean 0.685919; subspace 0.697950; adv 0.698546
+Train AUC is 0.575153; balanced AUC is 0.575153
+Train accuracy 0.542; balanced accuracy 0.555; FDR 0.491; TPR 0.764
+
+Train sex accuracy 0.515; balanced accuracy 0.569; FDR 0.599; TPR 0.755
+
+Train sex gap RMS 0.03525584320063255
+Train race accuracy 0.524; balanced accuracy 0.556; FDR 0.565; TPR 0.709
+
+Train race gap RMS 0.09367640270161338
+Train STD accuracy 0.004; balanced accuracy 0.006; FDR 0.017; TPR 0.023
+
+--------------------------------------------------
+Test AUC is 0.574135; balanced AUC is 0.574135
+Test accuracy 0.545; balanced accuracy 0.557; FDR 0.488; TPR 0.748
+
+Test sex accuracy 0.556; balanced accuracy 0.599; FDR 0.540; TPR 0.793
+
+Test sex gap RMS 0.053131091794247735
+Test race accuracy 0.528; balanced accuracy 0.564; FDR 0.569; TPR 0.721
+
+Test race gap RMS 0.06724369527308811
+Test STD accuracy 0.014; balanced accuracy 0.017; FDR 0.015; TPR 0.036
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.688998 to 0.688500; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689576 to 0.686848; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683606 to 0.682766; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689162 to 0.687146; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690835 to 0.688435; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689197 to 0.688153; resetting the attack
+Real and fair distances (max/min/mean):
+4264.453227493743 77.59161382685933 2326.1619161135686
+0.00011184938 1.4963329e-05 0.000102527185
+Counter success count is -1
+Epoch 7000 train accuracy 0.540265; loss 0.683647; lambda is 0.000010
+Epoch 7000 test accuracy 0.538826
+FAILED attacks: subspace 587; full 0; Nans after attack 0
+Loss clean 0.685599; subspace 0.697664; adv 0.698225
+Train AUC is 0.580710; balanced AUC is 0.580710
+Train accuracy 0.540; balanced accuracy 0.549; FDR 0.492; TPR 0.703
+
+Train sex accuracy 0.537; balanced accuracy 0.572; FDR 0.591; TPR 0.692
+
+Train sex gap RMS 0.052679265024998305
+Train race accuracy 0.530; balanced accuracy 0.552; FDR 0.565; TPR 0.655
+
+Train race gap RMS 0.08481985161688403
+Train STD accuracy 0.003; balanced accuracy 0.010; FDR 0.013; TPR 0.018
+
+--------------------------------------------------
+Test AUC is 0.579822; balanced AUC is 0.579822
+Test accuracy 0.539; balanced accuracy 0.549; FDR 0.493; TPR 0.722
+
+Test sex accuracy 0.543; balanced accuracy 0.582; FDR 0.551; TPR 0.759
+
+Test sex gap RMS 0.041093860178986176
+Test race accuracy 0.517; balanced accuracy 0.549; FDR 0.580; TPR 0.686
+
+Test race gap RMS 0.06379020405953352
+Test STD accuracy 0.013; balanced accuracy 0.016; FDR 0.015; TPR 0.036
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.687945 to 0.686769; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684861 to 0.683323; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686346 to 0.685176; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690939 to 0.687095; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688784 to 0.687524; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688592 to 0.686460; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684768 to 0.684307; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690490 to 0.689780; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690822 to 0.689376; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689515 to 0.685773; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688258 to 0.688026; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688348 to 0.687891; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689251 to 0.689076; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.684031 to 0.683067; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690064 to 0.688822; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688058 to 0.685398; resetting the attack
+Real and fair distances (max/min/mean):
+4230.515809171613 79.22710995383622 2198.063517802385
+0.00011163087 5.2079136e-05 9.6554875e-05
+Counter success count is -1
+Epoch 8000 train accuracy 0.537423; loss 0.684176; lambda is 0.000010
+Epoch 8000 test accuracy 0.536932
+FAILED attacks: subspace 603; full 0; Nans after attack 0
+Loss clean 0.684683; subspace 0.688490; adv 0.688968
+Train AUC is 0.576934; balanced AUC is 0.576934
+Train accuracy 0.537; balanced accuracy 0.546; FDR 0.494; TPR 0.690
+
+Train sex accuracy 0.537; balanced accuracy 0.571; FDR 0.592; TPR 0.685
+
+Train sex gap RMS 0.05028696702656185
+Train race accuracy 0.531; balanced accuracy 0.553; FDR 0.564; TPR 0.652
+
+Train race gap RMS 0.07732315865644893
+Train STD accuracy 0.003; balanced accuracy 0.009; FDR 0.014; TPR 0.017
+
+--------------------------------------------------
+Test AUC is 0.573685; balanced AUC is 0.573685
+Test accuracy 0.537; balanced accuracy 0.547; FDR 0.494; TPR 0.718
+
+Test sex accuracy 0.543; balanced accuracy 0.582; FDR 0.551; TPR 0.759
+
+Test sex gap RMS 0.04376267277408668
+Test race accuracy 0.517; balanced accuracy 0.549; FDR 0.580; TPR 0.686
+
+Test race gap RMS 0.06120977146398309
+Test STD accuracy 0.013; balanced accuracy 0.016; FDR 0.015; TPR 0.036
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.685237 to 0.685202; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689347 to 0.686144; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687983 to 0.686692; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689519 to 0.689402; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.695000 to 0.692539; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687221 to 0.685022; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688258 to 0.686704; resetting the attack
+Real and fair distances (max/min/mean):
+3989.349721529824 11.862380025522299 2167.0253375312855
+0.00011196735 4.132514e-05 9.27866e-05
+Counter success count is -1
+Epoch 9000 train accuracy 0.530317; loss 0.683723; lambda is 0.000010
+Epoch 9000 test accuracy 0.551136
+FAILED attacks: subspace 610; full 0; Nans after attack 0
+Loss clean 0.681484; subspace 0.691591; adv 0.692027
+Train AUC is 0.586430; balanced AUC is 0.586430
+Train accuracy 0.530; balanced accuracy 0.538; FDR 0.499; TPR 0.670
+
+Train sex accuracy 0.533; balanced accuracy 0.562; FDR 0.597; TPR 0.661
+
+Train sex gap RMS 0.053618488661523224
+Train race accuracy 0.527; balanced accuracy 0.545; FDR 0.570; TPR 0.629
+
+Train race gap RMS 0.08167061982820228
+Train STD accuracy 0.003; balanced accuracy 0.009; FDR 0.014; TPR 0.016
+
+--------------------------------------------------
+Test AUC is 0.588335; balanced AUC is 0.588335
+Test accuracy 0.551; balanced accuracy 0.559; FDR 0.483; TPR 0.690
+
+Test sex accuracy 0.583; balanced accuracy 0.613; FDR 0.522; TPR 0.747
+
+Test sex gap RMS 0.06784702640291894
+Test race accuracy 0.530; balanced accuracy 0.556; FDR 0.572; TPR 0.669
+
+Test race gap RMS 0.03281502275553532
+Test STD accuracy 0.026; balanced accuracy 0.028; FDR 0.025; TPR 0.039
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.689708 to 0.687809; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689457 to 0.687281; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.689666 to 0.687970; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.685139 to 0.683456; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693541 to 0.690697; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686713 to 0.686382; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688129 to 0.687269; resetting the attack
+Real and fair distances (max/min/mean):
+3612.591969457108 37.02159489847869 2182.8849668771018
+0.00011142981 5.6187142e-05 9.476309e-05
+Counter success count is -1
+Epoch 10000 train accuracy 0.535528; loss 0.684233; lambda is 0.000010
+Epoch 10000 test accuracy 0.552083
+FAILED attacks: subspace 617; full 0; Nans after attack 0
+Loss clean 0.685614; subspace 0.689439; adv 0.689798
+Train AUC is 0.586245; balanced AUC is 0.586245
+Train accuracy 0.536; balanced accuracy 0.544; FDR 0.495; TPR 0.691
+
+Train sex accuracy 0.537; balanced accuracy 0.569; FDR 0.592; TPR 0.678
+
+Train sex gap RMS 0.058287134893270094
+Train race accuracy 0.530; balanced accuracy 0.551; FDR 0.566; TPR 0.652
+
+Train race gap RMS 0.0787363411182509
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.013
+
+--------------------------------------------------
+Test AUC is 0.576892; balanced AUC is 0.576892
+Test accuracy 0.552; balanced accuracy 0.562; FDR 0.483; TPR 0.722
+
+Test sex accuracy 0.578; balanced accuracy 0.615; FDR 0.524; TPR 0.782
+
+Test sex gap RMS 0.06765876473236519
+Test race accuracy 0.526; balanced accuracy 0.557; FDR 0.573; TPR 0.692
+
+Test race gap RMS 0.0448127582599497
+Test STD accuracy 0.026; balanced accuracy 0.029; FDR 0.025; TPR 0.045
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.687821 to 0.685406; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.691780 to 0.690121; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.690660 to 0.689265; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.683421 to 0.683289; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688557 to 0.687656; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688127 to 0.687990; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.688608 to 0.686875; resetting the attack
+Real and fair distances (max/min/mean):
+4647.192604077766 30.335649631899738 2266.5732504106004
+0.00011155658 1.7791695e-05 8.7343156e-05
+Counter success count is -1
+Epoch 11000 train accuracy 0.531975; loss 0.684348; lambda is 0.000010
+Epoch 11000 test accuracy 0.557765
+FAILED attacks: subspace 624; full 0; Nans after attack 0
+Loss clean 0.686337; subspace 0.690467; adv 0.690841
+Train AUC is 0.582870; balanced AUC is 0.582870
+Train accuracy 0.532; balanced accuracy 0.540; FDR 0.498; TPR 0.681
+
+Train sex accuracy 0.533; balanced accuracy 0.563; FDR 0.597; TPR 0.664
+
+Train sex gap RMS 0.05915759947181996
+Train race accuracy 0.525; balanced accuracy 0.545; FDR 0.570; TPR 0.637
+
+Train race gap RMS 0.08332047329983987
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.014
+
+--------------------------------------------------
+Test AUC is 0.566199; balanced AUC is 0.566199
+Test accuracy 0.558; balanced accuracy 0.566; FDR 0.478; TPR 0.710
+
+Test sex accuracy 0.596; balanced accuracy 0.630; FDR 0.511; TPR 0.782
+
+Test sex gap RMS 0.08034192235551703
+Test race accuracy 0.537; balanced accuracy 0.566; FDR 0.566; TPR 0.692
+
+Test race gap RMS 0.03240889867543925
+Test STD accuracy 0.030; balanced accuracy 0.032; FDR 0.027; TPR 0.045
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.690936 to 0.690552; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687960 to 0.686351; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686874 to 0.686070; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.686022 to 0.685731; resetting the attack
+Real and fair distances (max/min/mean):
+3826.2777665778217 11.7752044912924 2388.156534007553
+0.00011772013 4.0434817e-05 9.452218e-05
+Counter success count is -1
+Epoch 12000 train accuracy 0.534818; loss 0.683961; lambda is 0.000010
+Epoch 12000 test accuracy 0.55303
+FAILED attacks: subspace 628; full 0; Nans after attack 0
+Loss clean 0.686012; subspace 0.690924; adv 0.691302
+Train AUC is 0.585192; balanced AUC is 0.585192
+Train accuracy 0.535; balanced accuracy 0.544; FDR 0.496; TPR 0.693
+
+Train sex accuracy 0.538; balanced accuracy 0.571; FDR 0.591; TPR 0.682
+
+Train sex gap RMS 0.06140731572941498
+Train race accuracy 0.531; balanced accuracy 0.553; FDR 0.564; TPR 0.655
+
+Train race gap RMS 0.08242145501683418
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.013
+
+--------------------------------------------------
+Test AUC is 0.562459; balanced AUC is 0.562459
+Test accuracy 0.553; balanced accuracy 0.563; FDR 0.482; TPR 0.724
+
+Test sex accuracy 0.578; balanced accuracy 0.615; FDR 0.524; TPR 0.782
+
+Test sex gap RMS 0.06637342395076569
+Test race accuracy 0.526; balanced accuracy 0.557; FDR 0.573; TPR 0.692
+
+Test race gap RMS 0.046436030716037247
+Test STD accuracy 0.026; balanced accuracy 0.029; FDR 0.025; TPR 0.045
+
+--------------------------------------------------
+Real and fair distances (max/min/mean):
+3609.385791640193 117.96807586608273 2226.2861613373793
+0.000111467394 5.5664885e-05 8.977643e-05
+Counter success count is -1
+Epoch 13000 train accuracy 0.535528; loss 0.683676; lambda is 0.000010
+Epoch 13000 test accuracy 0.55303
+FAILED attacks: subspace 628; full 0; Nans after attack 0
+Loss clean 0.681420; subspace 0.693062; adv 0.693442
+Train AUC is 0.596117; balanced AUC is 0.596117
+Train accuracy 0.536; balanced accuracy 0.544; FDR 0.495; TPR 0.691
+
+Train sex accuracy 0.537; balanced accuracy 0.569; FDR 0.592; TPR 0.678
+
+Train sex gap RMS 0.058287134893270094
+Train race accuracy 0.530; balanced accuracy 0.551; FDR 0.566; TPR 0.652
+
+Train race gap RMS 0.0787363411182509
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.013
+
+--------------------------------------------------
+Test AUC is 0.574780; balanced AUC is 0.574780
+Test accuracy 0.553; balanced accuracy 0.562; FDR 0.482; TPR 0.722
+
+Test sex accuracy 0.578; balanced accuracy 0.615; FDR 0.524; TPR 0.782
+
+Test sex gap RMS 0.066566699574383
+Test race accuracy 0.526; balanced accuracy 0.557; FDR 0.573; TPR 0.692
+
+Test race gap RMS 0.04315281659925348
+Test STD accuracy 0.026; balanced accuracy 0.029; FDR 0.025; TPR 0.045
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.687693 to 0.685798; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.687324 to 0.687056; resetting the attack
+Real and fair distances (max/min/mean):
+3968.1491174500848 45.64688162387128 2287.1771090119864
+0.00011138775 4.0671617e-05 7.489051e-05
+Counter success count is -1
+Epoch 14000 train accuracy 0.534344; loss 0.683346; lambda is 0.000010
+Epoch 14000 test accuracy 0.55303
+FAILED attacks: subspace 630; full 0; Nans after attack 0
+Loss clean 0.682820; subspace 0.689597; adv 0.689951
+Train AUC is 0.595745; balanced AUC is 0.595745
+Train accuracy 0.534; balanced accuracy 0.543; FDR 0.496; TPR 0.687
+
+Train sex accuracy 0.537; balanced accuracy 0.569; FDR 0.592; TPR 0.678
+
+Train sex gap RMS 0.05656153097588606
+Train race accuracy 0.529; balanced accuracy 0.550; FDR 0.566; TPR 0.649
+
+Train race gap RMS 0.07784414438750294
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.015
+
+--------------------------------------------------
+Test AUC is 0.570457; balanced AUC is 0.570457
+Test accuracy 0.553; balanced accuracy 0.562; FDR 0.482; TPR 0.718
+
+Test sex accuracy 0.578; balanced accuracy 0.615; FDR 0.524; TPR 0.782
+
+Test sex gap RMS 0.06720957230646322
+Test race accuracy 0.526; balanced accuracy 0.557; FDR 0.573; TPR 0.692
+
+Test race gap RMS 0.036606197172460136
+Test STD accuracy 0.026; balanced accuracy 0.029; FDR 0.025; TPR 0.045
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.692392 to 0.691300; resetting the attack
+WARNING: subspace attack failed: objective decreased from 0.693133 to 0.691713; resetting the attack
+Real and fair distances (max/min/mean):
+3748.019276099896 40.08483982650505 2170.9173552841376
+0.00011179793 5.323725e-05 9.5165684e-05
+Counter success count is -1
+Epoch 15000 train accuracy 0.530791; loss 0.682944; lambda is 0.000010
+Epoch 15000 test accuracy 0.558712
+FAILED attacks: subspace 632; full 0; Nans after attack 0
+Loss clean 0.677807; subspace 0.688718; adv 0.689107
+Train AUC is 0.602848; balanced AUC is 0.602848
+Train accuracy 0.531; balanced accuracy 0.539; FDR 0.499; TPR 0.677
+
+Train sex accuracy 0.533; balanced accuracy 0.563; FDR 0.597; TPR 0.664
+
+Train sex gap RMS 0.05724381795712478
+Train race accuracy 0.525; balanced accuracy 0.544; FDR 0.571; TPR 0.634
+
+Train race gap RMS 0.08239542519829703
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.015
+
+--------------------------------------------------
+Test AUC is 0.580899; balanced AUC is 0.580899
+Test accuracy 0.559; balanced accuracy 0.567; FDR 0.477; TPR 0.708
+
+Test sex accuracy 0.596; balanced accuracy 0.630; FDR 0.511; TPR 0.782
+
+Test sex gap RMS 0.07957087743134555
+Test race accuracy 0.537; balanced accuracy 0.566; FDR 0.566; TPR 0.692
+
+Test race gap RMS 0.027148776949235273
+Test STD accuracy 0.030; balanced accuracy 0.032; FDR 0.027; TPR 0.045
+
+--------------------------------------------------
+WARNING: subspace attack failed: objective decreased from 0.687598 to 0.687323; resetting the attack
+Real and fair distances (max/min/mean):
+4041.000304897936 58.52331708644266 2288.6785574400506
+0.00011179793 5.323725e-05 9.5165684e-05
+Counter success count is -1
+Epoch 15999 train accuracy 0.530554; loss 0.682045; lambda is 0.000010
+Epoch 15999 test accuracy 0.557765
+FAILED attacks: subspace 633; full 0; Nans after attack 0
+Loss clean 0.679998; subspace 0.692001; adv 0.692431
+Train AUC is 0.611283; balanced AUC is 0.611283
+Train accuracy 0.531; balanced accuracy 0.539; FDR 0.499; TPR 0.677
+
+Train sex accuracy 0.533; balanced accuracy 0.563; FDR 0.597; TPR 0.664
+
+Train sex gap RMS 0.05716781796040183
+Train race accuracy 0.525; balanced accuracy 0.544; FDR 0.571; TPR 0.634
+
+Train race gap RMS 0.0821036079284773
+Train STD accuracy 0.004; balanced accuracy 0.009; FDR 0.013; TPR 0.015
+
+--------------------------------------------------
+Test AUC is 0.610219; balanced AUC is 0.610219
+Test accuracy 0.558; balanced accuracy 0.566; FDR 0.478; TPR 0.706
+
+Test sex accuracy 0.596; balanced accuracy 0.630; FDR 0.511; TPR 0.782
+
+Test sex gap RMS 0.08094067144004503
+Test race accuracy 0.537; balanced accuracy 0.566; FDR 0.566; TPR 0.692
+
+Test race gap RMS 0.025781273999041985
+Test STD accuracy 0.030; balanced accuracy 0.032; FDR 0.027; TPR 0.045
+
+--------------------------------------------------
+
+Final train accuracy 0.530554
+Final test accuracy 0.557765
+Final lambda 0.000010
+Gender:
+Accuracy is 0.557765
+Balanced accuracy is 0.565999
+Gap RMS is 0.08094067144004498
+Mean absolute gap is 0.08016150894860985
+Max gap is 0.09136529296327456
+Average odds difference is -0.011204
+Equal opportunity difference is -0.091365
+Statistical parity difference is 0.016538
+
+Race:
+Accuracy is 0.557765
+Balanced accuracy is 0.565999
+Gap RMS is 0.025781273999041985
+Mean absolute gap is 0.02553569199788408
+Max gap is 0.02908569526589344
+Average odds difference is 0.025536
+Equal opportunity difference is 0.021986
+Statistical parity difference is 0.045439
