@@ -11,7 +11,7 @@ from compas_data import get_compas_train_test
 seeds = np.load('../seeds.npy')
 
 
-for i in [8]:#range(10):
+for i in range(1):
     data_seed = seeds[i, 0]
     expt_seed = seeds[i, 1]
     x_train, x_test, y_train, y_test, y_sex_train, y_sex_test, y_race_train,\

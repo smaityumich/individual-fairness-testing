@@ -10,7 +10,7 @@ import json
 np.random.seed(1)
 # Adult data processing
 seeds = np.load('../seeds.npy')
-for i in range(10):
+for i in range(1):
     data_seed = seeds[i, 0]
     print(f'Running data seed {data_seed}')
     x_train,x_test, y_train, y_test, y_sex_train, y_sex_test, y_race_train, y_race_test,\
