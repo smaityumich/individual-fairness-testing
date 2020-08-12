@@ -65,7 +65,7 @@ if __name__ == '__main__':
                  statistical_parity_difference_race = metrics.group_metrics(y_test, y_pred, race, label_good=1)
 
      
-     filename = f'./sensr/outcome/perturbed_ratio_0_to_500_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
+     filename = f'./sensr/outcome/perturbed_ratio_0_to_1000_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
      a = np.load(filename)
      a = a[np.isfinite(a)]
      lb = np.mean(a) - 1.645*np.std(a)/np.sqrt(a.shape[0])
