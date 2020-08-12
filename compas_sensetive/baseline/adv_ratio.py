@@ -42,7 +42,7 @@ def sample_perturbation(data_point, regularizer = 20, learning_rate = 3e-2, num_
         gradient = g.gradient(loss, x)
         x = x + learning_rate * gradient/((i+1) ** (2/3))
 
-    return_loss = utils.EntropyLoss(y, graph(x)) / utils.EntropyLoss(y, graph(x_start))
+    return_loss = utils.EntropyLoss(y, graph(x)) #/ utils.EntropyLoss(y, graph(x_start))
     #print('done')
     return return_loss.numpy()
 
