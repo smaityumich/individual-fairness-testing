@@ -24,7 +24,7 @@ for i in range(10):
 
     #### Using 4 protected attributes ####
     ## Reduction classifier
-    eps = 0.16
+    eps = 0.14
     constraint = EqualizedOdds()
     classifier = LogisticRegression(solver='liblinear', fit_intercept=True)
     mitigator = ExponentiatedGradient(classifier, constraint, eps=eps, T=50)
