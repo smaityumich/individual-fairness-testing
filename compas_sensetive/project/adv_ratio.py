@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from data_preprocess import get_data
+import compas_data as compas
 from sklearn import linear_model
 import utils
 import time
@@ -50,24 +50,21 @@ if __name__ == '__main__':
     seed_data = int(float(sys.argv[3]))
     seed_model = int(float(sys.argv[4]))
     lr = float(sys.argv[5])
-    x_train, x_test, y_train, y_test, _, y_sex_test, y_race_test = get_data(seed_data)
+    x_train, x_test, y_train, y_test, y_sex_train, y_sex_test,\
+        y_race_train, y_race_test, _ = compas.get_compas_train_test(random_state = seed_data)
+    y_sex_train, y_sex_test, y_race_train, y_race_test = np.copy(y_sex_train), np.copy(y_sex_test),\
+        np.copy(y_race_train), np.copy(y_race_test)
+
+    
 
 
+    # Calculate the sensitive directions
+    _, sensetive_directions = utils.sensitive_dir(x_test, y_sex_test, y_race_test)
 
-
-    sensetive_directions = []
-    protected_regression = linear_model.LogisticRegression(fit_intercept = True)
-    protected_regression.fit(x_test.numpy(), y_sex_test)
-    sensetive_directions.append(protected_regression.coef_.reshape((-1,)))
-    protected_regression.fit(x_test.numpy(), y_race_test)
-    sensetive_directions.append(protected_regression.coef_.reshape((-1,)))
-    sensetive_directions = np.array(sensetive_directions)
-
-    sensetive_directions = scipy.linalg.orth(sensetive_directions.T).T
-    for i, s in enumerate(sensetive_directions):
-        #while np.linalg.norm(s) != 1:
-        s = s/ np.linalg.norm(s)
-        sensetive_directions[i] = s
+    # Cast to tensor
+    x_test = tf.cast(x_test, dtype = tf.float32)
+    y_test = y_test.astype('int32')
+    y_test = tf.one_hot(y_test, 2)
     sensetive_directions = tf.cast(sensetive_directions, dtype = tf.float32)
 
 
