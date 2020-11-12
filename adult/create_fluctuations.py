@@ -8,31 +8,32 @@ import numpy as np
 
 
 def part_fluc(args):
+    print(str(arg)+'\n\n')
     expt, i, lr, step = args
     #start = starts[d]
-    #end = ends[d]
+    end = 1000
     np.random.seed(1)
     seeds = np.load('./seeds.npy')
     if expt == 'reduction':
         #seeds = np.random.randint(100000, size = (10, ))
         seed = seeds[i, 0]
-        os.system(f'python3 ./{expt}/adv_ratio.py {seed} {lr} {step} 0 9045')
+        os.system(f'python3 ./{expt}/adv_ratio.py {seed} {lr} {step} 0 {end}')
     elif expt == 'project':
         #seeds = np.random.randint(10000, size = (10, 2))
         data_seed = seeds[i, 0]
         expt_seed = seeds[i, 1]
-        os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} 0 9045')
+        os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} 0 {end}')
     elif expt == 'baseline':
         #seeds = np.random.randint(10000, size = (10, 2))
         data_seed = seeds[i, 0]
         expt_seed = seeds[i, 1]
-        os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} 0 9045')
+        os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} 0 {end}')
 
     else:
         #seeds = np.random.randint(100000, size = (10, 2))
         data_seed = seeds[i, 0]
         expt_seed = seeds[i, 1]
-        os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} 0 9045')
+        os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} 0 {end}')
 
 if __name__ == '__main__':
     #starts = np.arange(0, 9001, 200)

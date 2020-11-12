@@ -115,8 +115,10 @@ if __name__ == '__main__':
 
 
     perturbed_test_samples = []
-    for data in zip(x_unprotected_test[start:end], y_test[start:end]):
+    for i, data in enumerate(zip(x_unprotected_test[start:end], y_test[start:end])):
         perturbed_test_samples.append(sample_perturbation(data, regularizer=50, learning_rate=lr, num_steps=iters))
+        if i % 20 == 0:
+            print(f'Done {i}\n\n')
 
     perturbed_test_samples = np.array(perturbed_test_samples)
 
