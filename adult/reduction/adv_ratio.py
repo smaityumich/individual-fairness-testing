@@ -11,6 +11,7 @@ import scipy
 plt.ioff()
 import sys
 import json
+import os
 
 
 def sample_perturbation(data_point,  regularizer = 100, learning_rate = 5e-2, num_steps = 200):
@@ -54,9 +55,10 @@ def sample_perturbation(data_point,  regularizer = 100, learning_rate = 5e-2, nu
 if __name__ == '__main__':
 
 
-    start, end = int(float(sys.argv[1])), int(float(sys.argv[2]))
-    seed = int(float(sys.argv[3]))
-    lr = float(sys.argv[4])
+    start, end = int(float(sys.argv[4])), int(float(sys.argv[5]))
+    seed = int(float(sys.argv[1]))
+    lr = float(sys.argv[2])
+    iters = int(float(sys.argv[3]))
     dataset_orig_train, dataset_orig_test = preprocess_adult_data(seed = seed)
 
     x_unprotected_train, x_protected_train = dataset_orig_train.features[:, :39], dataset_orig_train.features[:, 39:]
@@ -114,13 +116,14 @@ if __name__ == '__main__':
 
     perturbed_test_samples = []
     for data in zip(x_unprotected_test[start:end], y_test[start:end]):
-        perturbed_test_samples.append(sample_perturbation(data,  regularizer=50, learning_rate=lr, num_steps=500))
+        perturbed_test_samples.append(sample_perturbation(data,  regularizer=50, learning_rate=lr, num_steps=iters))
 
     perturbed_test_samples = np.array(perturbed_test_samples)
 
+    if not os.path.isdir('./reduction/outcome'):
+        os.mkdir('./reduction/outcome')
 
-
-    filename = f'./reduction/outcome/perturbed_ratio_seed_{seed}_lr_{lr}.npy'
+    filename = f'./reduction/outcome/perturbed_ratio_seed_{seed}_lr_{lr}_step_{iters}.npy'
 
 
     np.save(filename, perturbed_test_samples)

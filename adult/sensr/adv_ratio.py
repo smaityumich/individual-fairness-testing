@@ -12,6 +12,7 @@ plt.ioff()
 import sys
 import json
 from tensorflow import keras
+import os
 
 
 def SimpleDense(variable):
@@ -59,9 +60,10 @@ def sample_perturbation(data_point, regularizer = 100, learning_rate = 5e-2, num
 if __name__ == '__main__':
 
 
-    start, end = int(float(sys.argv[1])), int(float(sys.argv[2]))
-    seed_data, seed_model = int(float(sys.argv[3])), int(float(sys.argv[4]))
-    lr = float(sys.argv[5])
+    start, end = int(float(sys.argv[5])), int(float(sys.argv[6]))
+    seed_data, seed_model = int(float(sys.argv[1])), int(float(sys.argv[2]))
+    lr = float(sys.argv[3])
+    iters = int(float(sys.argv[4]))
 
     dataset_orig_train, dataset_orig_test = preprocess_adult_data(seed = seed_data)
 
@@ -113,14 +115,15 @@ if __name__ == '__main__':
 
 
     perturbed_test_samples = []
-    for data in zip(x_unprotected_test, y_test):
-        perturbed_test_samples.append(sample_perturbation(data, regularizer=50, learning_rate=lr, num_steps=200))
+    for data in zip(x_unprotected_test[start:end], y_test[start:end]):
+        perturbed_test_samples.append(sample_perturbation(data, regularizer=50, learning_rate=lr, num_steps=iters))
 
     perturbed_test_samples = np.array(perturbed_test_samples)
 
+    if not os.path.isdir('./sensr/outcome'):
+        os.mkdir('./sensr/outcome')
 
-
-    filename = f'./sensr/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
+    filename = f'./sensr/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}_step_{iters}.npy'
 
 
     np.save(filename, perturbed_test_samples)

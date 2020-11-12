@@ -10,9 +10,10 @@ import matplotlib.pyplot as plt
 import scipy
 plt.ioff()
 import sys
+import os
 #tf.compat.v1.enable_eager_execution()
 
-def sample_perturbation(data_point, regularizer = 20, learning_rate = 3e-2, num_steps = 200):
+def sample_perturbation(data_point, graph,  regularizer = 20, learning_rate = 3e-2, num_steps = 200):
     """
     Calculates ratio between perturbed loss and original loss
 
@@ -47,10 +48,11 @@ def sample_perturbation(data_point, regularizer = 20, learning_rate = 3e-2, num_
 
 if __name__ == '__main__':
 
-    start, end = int(float(sys.argv[1])), int(float(sys.argv[2]))
-    seed_data = int(float(sys.argv[3]))
-    seed_model = int(float(sys.argv[4]))
-    lr = float(sys.argv[5])
+    start, end = int(float(sys.argv[5])), int(float(sys.argv[6]))
+    seed_data = int(float(sys.argv[1]))
+    seed_model = int(float(sys.argv[2]))
+    lr = float(sys.argv[3])
+    iters = int(float(sys.argv[4]))
     dataset_orig_train, dataset_orig_test = preprocess_adult_data(seed = seed_data)
 
     x_unprotected_train, x_protected_train = dataset_orig_train.features[:, :39], dataset_orig_train.features[:, 39:]
@@ -76,7 +78,6 @@ if __name__ == '__main__':
 
 
 
-
     
     y_train, y_test = y_train.astype('int32'), y_test.astype('int32')
     x_unprotected_train, x_unprotected_test = tf.cast(x_unprotected_train, dtype = tf.float32), tf.cast(x_unprotected_test, dtype = tf.float32)
@@ -85,18 +86,19 @@ if __name__ == '__main__':
 
 
 
-    graph = tf.keras.models.load_model(f'./baseline_bal/graphs/graph_{seed_data}_{seed_model}')     
+    graph = tf.keras.models.load_model(f'./baseline/graphs/graph_{seed_data}_{seed_model}')     
 
 
 
     perturbed_test_samples = []
-    for data in zip(x_unprotected_test, y_test):
-        perturbed_test_samples.append(sample_perturbation(data, regularizer=50, learning_rate=lr, num_steps=200))
+    for data in zip(x_unprotected_test[start:end], y_test[start:end]):
+        perturbed_test_samples.append(sample_perturbation(data, graph= graph, regularizer=50, learning_rate=lr, num_steps=iters))
     perturbed_test_samples = np.array(perturbed_test_samples)
 
+    if not os.path.isdir('./baseline/outcome'):
+        os.mkdir('./baseline/outcome')
 
-
-    filename = f'./baseline_bal/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}.npy'
+    filename = f'./baseline/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}_step_{iters}.npy'
 
 
     np.save(filename, perturbed_test_samples)
