@@ -94,8 +94,6 @@ if __name__ == '__main__':
     for i, data in enumerate(zip(x_unprotected_test[start:end], y_test[start:end])):
         perturbed_test_samples.append(sample_perturbation(data, graph= graph, regularizer=50, learning_rate=lr, num_steps=iters))
     perturbed_test_samples = np.array(perturbed_test_samples)
-        if i % 20 == 0:
-            print(f'Done {i}\n\n')    
 
     if not os.path.isdir('./baseline/outcome'):
         os.mkdir('./baseline/outcome')
