@@ -8,10 +8,10 @@ import numpy as np
 
 
 def part_fluc(args):
-    print(str(arg)+'\n\n')
+    print(str(args)+'\n\n')
     expt, i, lr, step = args
     #start = starts[d]
-    end = 1000
+    end = 500
     np.random.seed(1)
     seeds = np.load('./seeds.npy')
     if expt == 'reduction':
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     #data_index = range(ends.shape[0])
     iteration = range(10)
     lrs = [5e-4, 2e-3, 5e-3]
-    steps = [10, 20, 40, 80, 160, 320]
+    steps = [10, 20, 40, 80, 160, 320, 640, 1280]
 
     a = itertools.product(expts, iteration, lrs, steps)
     b = [i for i in a]
