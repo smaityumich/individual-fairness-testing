@@ -1,0 +1,10 @@
+SLURM_JOBID:  15092414
+SLURM_ARRAY_TASK_ID:  495
+SLURM_ARRAY_JOB_ID:  15091918
+  File "./baseline/adv_ratio.py", line 97
+    if i % 20 == 0:
+    ^
+IndentationError: unexpected indent
+('baseline', 0, 0.002, 1280)
+
+
