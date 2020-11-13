@@ -39,11 +39,11 @@ if __name__ == '__main__':
     #starts = np.arange(0, 9001, 200)
     #ends = np.arange(200, 9201, 200)
     #ends[-1] = 9045
-    expts = ['baseline']#'sensr', 'reduction', 'baseline', 'project'] 
+    expts = ['sensr', 'reduction', 'baseline', 'project'] 
     #data_index = range(ends.shape[0])
     iteration = range(10)
     lrs = [5e-4, 2e-3, 5e-3]
-    steps = [10, 20, 40, 80, 160, 320, 640]
+    steps = [10, 20, 40, 80, 160, 320, 640, 1280, 2560]
 
     a = itertools.product(expts, iteration, lrs, steps)
     b = [i for i in a]

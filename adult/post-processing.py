@@ -9,7 +9,7 @@ expts = ['sensr', 'reduction', 'baseline', 'project']
     #data_index = range(ends.shape[0])
 iteration = range(10)
 lrs = [5e-4, 2e-3, 5e-3]
-steps = [10, 20, 40, 80, 160, 320]
+steps = [10, 20, 40, 80, 160, 320, 640, 1280, 2560]
 
 
 
@@ -35,10 +35,11 @@ with open(outfile, 'a') as f:
             out_dict['seed-data'] = seed_data
             out_dict['seed-model'] = seed_model
         ratios = np.load(filename)
-        ratios = ratios[~np.isnan(ratios)]
-        out_dict['mean'], out_dict['std'], out_dict['sample-size'] = np.mean(ratios), np.std(ratios), np.shape(ratios)[0] 
+        ratios1 = ratios[~np.isnan(ratios)]
+        out_dict['mean'], out_dict['std'], out_dict['sample-size'] = np.mean(ratios1), np.std(ratios1), np.shape(ratios1)[0] 
         f.writelines(str(out_dict)+'\n')
         print('Done: '+str(args)+'\n')
+        print('Ratios: \n'+str(ratios)+'\n\n\n')
 
     
 
