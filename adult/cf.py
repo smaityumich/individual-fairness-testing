@@ -9,7 +9,7 @@ if __name__ == '__main__':
     #ends[-1] = 9045
     expt = 'sensr'
     #data_index = range(ends.shape[0])
-    i = 0
+    expt = 0
     lr =  5e-3
     step = 500
 
@@ -17,6 +17,6 @@ if __name__ == '__main__':
     start = starts[i]
     end = start + 20
     seeds = np.load('./seeds.npy')
-    data_seed = seeds[i, 0]
-    expt_seed = seeds[i, 1]
+    data_seed = seeds[expt, 0]
+    expt_seed = seeds[expt, 1]
     os.system(f'python3 ./sensr/adv_ratio.py {data_seed} {expt_seed} {lr} {step} {start} {end}')
