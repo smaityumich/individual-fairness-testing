@@ -125,7 +125,7 @@ if __name__ == '__main__':
     if not os.path.isdir('./reduction/outcome'):
         os.mkdir('./reduction/outcome')
 
-    filename = f'./reduction/outcome/perturbed_ratio_seed_{seed}_lr_{lr}_step_{iters}.npy'
+    filename = f'./reduction/outcome/perturbed_ratio_seed_{seed}_lr_{lr}_step_{iters}_start_{start}_end_{end}.npy'
 
 
     np.save(filename, perturbed_test_samples)
