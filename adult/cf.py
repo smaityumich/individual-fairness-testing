@@ -11,7 +11,7 @@ if __name__ == '__main__':
     #data_index = range(ends.shape[0])
     expt = 0
     lr =  5e-3
-    step = 500
+    step = 50
 
     i = int(sys.argv[1])
     start = starts[i]
