@@ -10,15 +10,16 @@ expts = ['sensr', 'reduction', 'baseline', 'project']
 iteration = range(10)
 lrs = [5e-3]#[5e-4, 2e-3, 5e-3]
 steps = [500]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
-starts = [0]
-ends = [200]
+starts = np.arange(0, 9001, 200)
+ends = np.arange(200, 9201, 200)
+ends[-1] = 9045
 
 
 
 with open(outfile, 'a') as f:
 
-    for args in itertools.product(expts, iteration, lrs, steps, starts, ends):
-        expt, i, lr, step, start, end = args
+    for args in itertools.product(expts, iteration, lrs, steps, zip(starts, ends)):
+        expt, i, lr, step, (start, end) = args
         #end = 1000
         seeds = np.load('./seeds.npy')
         out_dict = dict()
@@ -47,7 +48,7 @@ with open(outfile, 'a') as f:
         out_dict['sum-start'], out_dict['sum-end'], out_dict['sum-cov'] = np.sum(loss_start), np.sum(loss_end), np.sum(loss_start*loss_end)
         f.writelines(str(out_dict)+'\n')
         print('Done: '+str(args)+'\n')
-        print('Ratios, loss_start, loss_end: \n'+str((ratios, loss_start, loss_end))+'\n\n\n')
+        print('Ratios, loss_start, loss_end: \n'+str((ratios, loss_start-loss_end))+'\n\n\n')
 
     
 

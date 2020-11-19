@@ -1,3 +1,0 @@
-{'expt': 'sensr', 'lr': 0.005, 'step': 500, 'start': 0, 'end': 200, 'seed-data': 98539, 'seed-model': 77708, 'sum-ratio': 209.5166, 'sum-sq-ratio': 219.85835, 'sample-size': 200, 'sum-start': 145.0, 'sum-end': 145.0, 'sum-cov': 145.0}
-{'expt': 'sensr', 'lr': 0.005, 'step': 500, 'start': 0, 'end': 200, 'seed-data': 5192, 'seed-model': 98047, 'sum-ratio': 203.12598, 'sum-sq-ratio': 206.3258, 'sample-size': 200, 'sum-start': 164.0, 'sum-end': 164.0, 'sum-cov': 164.0}
-{'expt': 'sensr', 'lr': 0.005, 'step': 500, 'start': 0, 'end': 200, 'seed-data': 50057, 'seed-model': 73349, 'sum-ratio': 203.0136, 'sum-sq-ratio': 206.11319, 'sample-size': 200, 'sum-start': 153.0, 'sum-end': 153.0, 'sum-cov': 153.0}

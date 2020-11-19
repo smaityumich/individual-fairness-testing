@@ -8,9 +8,8 @@ import numpy as np
 
 
 def part_fluc(args):
-    starts = np.arange(0, 9001, 200)
-    ends = np.arange(200, 9201, 200)
-    ends[-1] = 9045
+    starts = np.arange(0, 9001, 20)
+    ends = np.arange(20, 9021, 20)
     print(str(args)+'\n\n')
     expt, i, lr, step, d = args
     start = starts[d]
@@ -39,18 +38,20 @@ def part_fluc(args):
         os.system(f'python3 ./{expt}/adv_ratio.py {data_seed} {expt_seed} {lr} {step} {start} {end}')
 
 if __name__ == '__main__':
-    starts = np.arange(0, 9001, 200)
-    ends = np.arange(200, 9201, 200)
-    ends[-1] = 9045
+    starts = np.arange(0, 9001, 20)
+    ends = np.arange(20, 9021, 20)
     expts = ['sensr', 'reduction', 'baseline', 'project'] 
     data_index = range(ends.shape[0])
     iteration = range(10)
     lrs = [5e-3]#[5e-4, 2e-3, 5e-3]
-    steps = [500]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
+    steps = [1000, 2000]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
 
     a = itertools.product(expts, iteration, lrs, steps, data_index)
     b = [i for i in a]
     i = int(sys.argv[1])
-    part_fluc(b[i])
+    if i < len(b):
+        part_fluc(b[i])
+    else: 
+        print('Out of range')
     #print(f'Done {i}\n\n')
 
