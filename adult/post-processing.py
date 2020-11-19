@@ -9,10 +9,9 @@ expts = ['sensr', 'reduction', 'baseline', 'project']
     #data_index = range(ends.shape[0])
 iteration = range(10)
 lrs = [5e-3]#[5e-4, 2e-3, 5e-3]
-steps = [500]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
-starts = np.arange(0, 9001, 200)
-ends = np.arange(200, 9201, 200)
-ends[-1] = 9045
+steps = [1000, 2000]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
+starts = np.arange(0, 9001, 20)
+ends = np.arange(20, 9021, 20)
 
 
 
@@ -41,11 +40,16 @@ with open(outfile, 'a') as f:
             out_dict['seed-data'] = seed_data
             out_dict['seed-model'] = seed_model
         summary = np.load(filename)
+        ratios = summary[:, 0]
+        ratios = ratios[~np.isnan(ratios)]
+        summary = summary[:, 1:] 
         summary = summary[~np.isnan(summary).any(axis=1), :]
-        ratios, loss_start, loss_end = summary[:, 0], summary[:, 1], summary[:, 2]
+        loss_start, loss_end = summary[:, 0], summary[:, 1]
         #ratios = ratios[~np.isnan(ratios)]
-        out_dict['sum-ratio'], out_dict['sum-sq-ratio'], out_dict['sample-size'] = np.sum(ratios), np.sum(ratios**2), np.shape(ratios)[0] 
-        out_dict['sum-start'], out_dict['sum-end'], out_dict['sum-cov'] = np.sum(loss_start), np.sum(loss_end), np.sum(loss_start*loss_end)
+        out_dict['sum-ratio'], out_dict['sum-sq-ratio'],\
+         out_dict['sample-size-ratios'] = np.sum(ratios), np.sum(ratios**2), np.shape(ratios)[0] 
+        out_dict['sum-start'], out_dict['sum-end'], out_dict['sum-cov'], out_dict['sample-size-0-1']\
+         = np.sum(loss_start), np.sum(loss_end), np.sum(loss_start*loss_end), np.shape(loss_start)[0]
         f.writelines(str(out_dict)+'\n')
         print('Done: '+str(args)+'\n')
         print('Ratios, loss_start, loss_end: \n'+str((ratios, loss_start-loss_end))+'\n\n\n')
