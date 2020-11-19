@@ -39,9 +39,11 @@ with open(outfile, 'a') as f:
             filename = f'./{expt}/outcome/perturbed_ratio_seed_{seed_data}_{seed_model}_lr_{lr}_step_{step}_start_{start}_end_{end}.npy'
             out_dict['seed-data'] = seed_data
             out_dict['seed-model'] = seed_model
-        ratios = np.load(filename)
-        ratios1 = ratios[~np.isnan(ratios)]
-        out_dict['mean'], out_dict['std'], out_dict['sample-size'] = np.mean(ratios1), np.std(ratios1), np.shape(ratios1)[0] 
+        summary = np.load(filename)
+        summary = summary[~np.isnan(summary).any(axis=1), :]
+        ratios, loss_start, loss_end = summary[:, 0], summary[:, 1], summary[:, 2]
+        #ratios = ratios[~np.isnan(ratios)]
+        out_dict['mean'], out_dict['std'], out_dict['sample-size'] = np.mean(ratios), np.std(ratios), np.shape(ratios)[0] 
         f.writelines(str(out_dict)+'\n')
         print('Done: '+str(args)+'\n')
         print('Ratios: \n'+str(ratios)+'\n\n\n')
