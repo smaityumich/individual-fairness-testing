@@ -40,10 +40,14 @@ def sample_perturbation(data_point, graph, regularizer = 20, learning_rate = 3e-
 
         gradient = g.gradient(loss, x)
         x = x + learning_rate * gradient
-
-    return_loss = utils.EntropyLoss(y, graph(x)) / utils.EntropyLoss(y, graph(x_start))
     
-    return return_loss.numpy()
+    prob = graph(x)
+    prob_start = graph(x_start)
+    loss_end, loss_start = 1 - utils._accuracy(y, prob), 1 - utils._accuracy(y, prob)
+    return_ratio = utils.EntropyLoss(y, prob) / utils.EntropyLoss(y, prob_start)
+    return_ratio = return_ratio.numpy()
+    loss_end, loss_start = loss_end.numpy(), loss_start.numpy()
+    return return_ratio, loss_start, loss_end
 
 if __name__ == '__main__':
 

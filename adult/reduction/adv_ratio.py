@@ -45,9 +45,15 @@ def sample_perturbation(data_point,  regularizer = 100, learning_rate = 5e-2, nu
         gradient = g.gradient(loss, x)
         x = x + learning_rate * gradient
 
-    return_loss = utils.EntropyLoss(y, graph(x)) / utils.EntropyLoss(y, graph(x_start))
+    prob = graph(x)
+    prob_start = graph(x_start)
+    loss_end, loss_start = 1 - utils._accuracy(y, prob), 1 - utils._accuracy(y, prob)
+    return_ratio = utils.EntropyLoss(y, prob) / utils.EntropyLoss(y, prob_start)
+    return_ratio = return_ratio.numpy()
+    loss_end, loss_start = loss_end.numpy(), loss_start.numpy()
+
     
-    return return_loss.numpy()
+    return return_ratio, loss_start, loss_end
 
 
 
@@ -118,7 +124,7 @@ if __name__ == '__main__':
     for i, data in enumerate(zip(x_unprotected_test[start:end], y_test[start:end])):
         perturbed_test_samples.append(sample_perturbation(data,  regularizer=50, learning_rate=lr, num_steps=iters))
         if i % 20 == 0:
-            print('Done {i}\n\n')
+            print(f'Done {i}\n\n')
 
     perturbed_test_samples = np.array(perturbed_test_samples)
 
