@@ -11,7 +11,7 @@ def part_fluc(args):
     print(str(args)+'\n\n')
     expt, i, lr, step = args
     #start = starts[d]
-    end = 400
+    end = 200
     np.random.seed(1)
     seeds = np.load('./seeds.npy')
     if expt == 'reduction':
