@@ -13,7 +13,7 @@
 echo "SLURM_JOBID: " $SLURM_JOBID
 echo "SLURM_ARRAY_TASK_ID: " $SLURM_ARRAY_TASK_ID
 echo "SLURM_ARRAY_JOB_ID: " $SLURM_ARRAY_JOB_ID
-for i in {4..7}
+for i in {0..3}
 do
 python3 create_fluctuations.py $((SLURM_ARRAY_TASK_ID+i*5000))
 done

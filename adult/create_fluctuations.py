@@ -44,7 +44,7 @@ if __name__ == '__main__':
     data_index = range(ends.shape[0])
     iteration = range(10)
     lrs = [5e-3]#[5e-4, 2e-3, 5e-3]
-    steps = [1000, 2000]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
+    steps = [500]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
 
     a = itertools.product(expts, iteration, lrs, steps, data_index)
     b = [i for i in a]

@@ -43,7 +43,7 @@ def sample_perturbation(data_point, graph, regularizer = 20, learning_rate = 3e-
     
     prob = graph(x)
     prob_start = graph(x_start)
-    loss_end, loss_start = 1 - utils._accuracy(y, prob), 1 - utils._accuracy(y, prob)
+    loss_end, loss_start = 1 - utils._accuracy(y, prob), 1 - utils._accuracy(y, prob_start)
     return_ratio = utils.EntropyLoss(y, prob) / utils.EntropyLoss(y, prob_start)
     return_ratio = return_ratio.numpy()
     loss_end, loss_start = loss_end.numpy(), loss_start.numpy()
