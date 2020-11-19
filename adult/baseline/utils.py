@@ -32,8 +32,8 @@ def EntropyLoss(y, prob):
 
 def _accuracy(y, prob):
     ypred = tf.cast(tf.argmax(prob, axis = 1), dtype = tf.float32)
-    acc = tf.cast(ypred-y[:, 1], dtype = tf.float32)
-    return tf.reduce_mean(acc)
+    acc = tf.cast(ypred, dtype = tf.float32)-tf.cast(y[:, 1], dtype = tf.float32)
+    return tf.reduce_mean(tf.abs(acc))
 
 
 

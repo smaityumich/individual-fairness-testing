@@ -8,8 +8,8 @@ outfile = sys.argv[1]
 expts = ['sensr', 'reduction', 'baseline', 'project'] 
     #data_index = range(ends.shape[0])
 iteration = range(10)
-lrs = [5e-4, 2e-3, 5e-3]
-steps = [10, 20, 40, 80, 160, 320, 640, 1280, 2560]
+lrs = [5e-3]#[5e-4, 2e-3, 5e-3]
+steps = [500]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
 starts = [0]
 ends = [200]
 
@@ -19,7 +19,7 @@ with open(outfile, 'a') as f:
 
     for args in itertools.product(expts, iteration, lrs, steps, starts, ends):
         expt, i, lr, step, start, end = args
-        end = 1000
+        #end = 1000
         seeds = np.load('./seeds.npy')
         out_dict = dict()
         out_dict['expt'] = expt
@@ -43,10 +43,11 @@ with open(outfile, 'a') as f:
         summary = summary[~np.isnan(summary).any(axis=1), :]
         ratios, loss_start, loss_end = summary[:, 0], summary[:, 1], summary[:, 2]
         #ratios = ratios[~np.isnan(ratios)]
-        out_dict['mean'], out_dict['std'], out_dict['sample-size'] = np.mean(ratios), np.std(ratios), np.shape(ratios)[0] 
+        out_dict['sum-ratio'], out_dict['sum-sq-ratio'], out_dict['sample-size'] = np.sum(ratios), np.sum(ratios**2), np.shape(ratios)[0] 
+        out_dict['sum-start'], out_dict['sum-end'], out_dict['sum-cov'] = np.sum(loss_start), np.sum(loss_end), np.sum(loss_start*loss_end)
         f.writelines(str(out_dict)+'\n')
         print('Done: '+str(args)+'\n')
-        print('Ratios: \n'+str(ratios)+'\n\n\n')
+        print('Ratios, loss_start, loss_end: \n'+str((ratios, loss_start, loss_end))+'\n\n\n')
 
     
 
