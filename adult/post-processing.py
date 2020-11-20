@@ -9,7 +9,7 @@ expts = ['sensr', 'reduction', 'baseline', 'project']
     #data_index = range(ends.shape[0])
 iteration = range(10)
 lrs = [5e-3]#[5e-4, 2e-3, 5e-3]
-steps = [500]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
+steps = [1000]#[10, 20, 40, 80, 160, 320, 640, 1280, 2560]
 starts = np.arange(0, 9001, 20)
 ends = np.arange(20, 9021, 20)
 
